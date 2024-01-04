@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/thought_bubble_logo.gif";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import { LuMenu } from "react-icons/lu";
@@ -9,6 +9,7 @@ import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
+	const [active, setActive] = useState("Home");
 	const [navBg, setNavbg] = useState(false);
 
 	const changeBg = () => {
@@ -40,34 +41,56 @@ const Navbar = () => {
 
 					<ul className=' list-none hidden sm:flex flex-row m-0 p-0'>
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<NavLink
-								to='/'
-								className={({ isActive }) =>
-									isActive
-										? "text-white active-link px-1"
-										: "text-[#FFFFFF99] px-1 navmenu"
-								}>
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+								active === "Home"
+									? "text-white active-link px-1"
+									: "text-[#FFFFFF99] px-1 navmenu"
+							} hover:text-white font-medium cursor-pointer`}
+							onClick={() => {
+								setActive("Home");
+							}}>
+							<a href='/'>
 								<span>Home</span>
-							</NavLink>
+							</a>
 						</li>
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/about'>
-								<span className='navmenu px-1'>About</span>
-							</ActiveLink>
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+								active === "About"
+									? "text-white active-link px-1"
+									: "text-[#FFFFFF99] px-1 navmenu"
+							} hover:text-white font-medium cursor-pointer`}
+							onClick={() => {
+								setActive("About");
+							}}>
+							<a href='./#about'>
+								<span>About</span>
+							</a>
 						</li>
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/services'>
-								<span className='navmenu px-1'>Services</span>
-							</ActiveLink>
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+								active === "Services"
+									? "text-white active-link px-1"
+									: "text-[#FFFFFF99] px-1 navmenu"
+							} hover:text-white font-medium cursor-pointer`}
+							onClick={() => {
+								setActive("Services");
+							}}>
+							<a href='#services'>
+								<span>Services</span>
+							</a>
 						</li>
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/contact'>
-								<span className='navmenu px-1'>Contact</span>
-							</ActiveLink>
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+								active === "Contact"
+									? "text-white active-link px-1"
+									: "text-[#FFFFFF99] px-1 navmenu"
+							} hover:text-white font-medium cursor-pointer`}
+							onClick={() => {
+								setActive("Contact");
+							}}>
+							<a href='/contact'>
+								<span>Contact</span>
+							</a>
 						</li>
 					</ul>
 

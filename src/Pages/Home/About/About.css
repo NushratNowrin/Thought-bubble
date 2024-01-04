@@ -1,12 +1,24 @@
 .section-bg {
 	background-color: #f7f0e6;
+	overflow: hidden;
 }
 .curve-down {
 	height: 84px;
 	background: #f7f0e6;
 	border-radius: 0 0 50% 50%/0 0 100% 100%;
+	transform: scaleX(1.15);
 }
 
 .image {
 	border-radius: 25px 150px 150px;
+}
+
+.about-heading::after {
+	content: "";
+	position: absolute;
+	height: 4px;
+	width: 10%;
+	left: 0;
+	bottom: -25px;
+	background-color: #feb900;
 }
