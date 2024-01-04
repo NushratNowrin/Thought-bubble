@@ -1,5 +1,13 @@
+import About from "./About/About";
+import Hero from "./Hero/Hero";
+
 const Home = () => {
-	return <div className='bg-[#0089B2] min-h-[872px]'></div>;
+	return (
+		<div>
+			<Hero></Hero>
+			<About></About>
+		</div>
+	);
 };
 
 export default Home;

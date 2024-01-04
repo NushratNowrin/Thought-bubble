@@ -1,0 +1,12 @@
+.section-bg {
+	background-color: #f7f0e6;
+}
+.curve-down {
+	height: 84px;
+	background: #f7f0e6;
+	border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+
+.image {
+	border-radius: 25px 150px 150px;
+}
