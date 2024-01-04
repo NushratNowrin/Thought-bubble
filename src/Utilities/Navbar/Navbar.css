@@ -1,0 +1,13 @@
+.navlink {
+	font-family: "Roboto", sans-serif;
+	position: relative;
+}
+.navmenu::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 60%;
+	right: 0;
+	bottom: 5px;
+	background-color: #feb900;
+}
