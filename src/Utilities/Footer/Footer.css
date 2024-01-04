@@ -1,0 +1,11 @@
+.footer {
+	background-image: url("../../assets/footer.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.footer-description {
+	font-family: "Roboto", sans-serif;
+}
+.links-heading {
+	font-family: "Overpass", sans-serif;
+}
