@@ -7,6 +7,7 @@ import "./index.css";
 import Main from "./Layout/Main";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
+import Services from "./Pages/Services/Services";
 
 // Basic routing
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home></Home>,
+			},
+			{
+				path: "/services",
+				element: <Services></Services>,
 			},
 			{
 				path: "/contact",

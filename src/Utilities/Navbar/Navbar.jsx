@@ -75,9 +75,9 @@ const Navbar = () => {
 							onClick={() => {
 								setActive("Services");
 							}}>
-							<a href='#services'>
+							<Link to='/services'>
 								<span>Services</span>
-							</a>
+							</Link>
 						</li>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
@@ -88,9 +88,9 @@ const Navbar = () => {
 							onClick={() => {
 								setActive("Contact");
 							}}>
-							<a href='/contact'>
+							<Link to='/contact'>
 								<span>Contact</span>
-							</a>
+							</Link>
 						</li>
 					</ul>
 

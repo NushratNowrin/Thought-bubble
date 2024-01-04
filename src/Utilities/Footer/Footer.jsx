@@ -31,20 +31,20 @@ const Footer = () => {
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='/'>
+									<a href='#about'>
 										<span>About Us</span>
 									</a>
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='/'>
+									<a href='#service'>
 										<span>Services</span>
 									</a>
 								</li>
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='/'>
-										<span>Contacts</span>
+									<a href='/contact'>
+										<span>Contact</span>
 									</a>
 								</li>
 							</ul>
@@ -61,10 +61,6 @@ const Footer = () => {
 					<p className='text-sm'>
 						© 2010-2023 <span className='font-semibold'>Haran Rasalingam</span>{" "}
 						| All Rights Reserved
-					</p>
-					<p className='text-[13px]'>
-						Designed by <span className='text-[#feb900]'>Oleksandr</span>{" "}
-						Distributed by <span className='text-[#feb900]'>Oleksandr</span>
 					</p>
 				</div>
 			</div>
