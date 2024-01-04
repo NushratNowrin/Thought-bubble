@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/thought_bubble_logo.gif";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 import { LuMenu } from "react-icons/lu";
@@ -25,26 +25,32 @@ const Navbar = () => {
 					<ul className=' list-none hidden sm:flex flex-row m-0 p-0'>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/'>
-								<span className='navmenu px-1'>Home</span>
+							<NavLink
+								to='/'
+								className={({ isActive }) =>
+									isActive
+										? "text-white active-link px-1"
+										: "text-[#FFFFFF99] px-1 navmenu"
+								}>
+								<span>Home</span>
+							</NavLink>
+						</li>
+						<li
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
+							<ActiveLink to='/about'>
+								<span className='navmenu px-1'>About</span>
 							</ActiveLink>
 						</li>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/about' className='navmenu px-1'>
-								About
+							<ActiveLink to='/services'>
+								<span className='navmenu px-1'>Services</span>
 							</ActiveLink>
 						</li>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/services' className=' px-1'>
-								Services
-							</ActiveLink>
-						</li>
-						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}>
-							<ActiveLink to='/contact' className=' px-1'>
-								Contact
+							<ActiveLink to='/contact'>
+								<span className='navmenu px-1'>Contact</span>
 							</ActiveLink>
 						</li>
 					</ul>
