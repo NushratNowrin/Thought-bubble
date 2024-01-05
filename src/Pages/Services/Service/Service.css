@@ -1,0 +1,15 @@
+.content {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	right: 0;
+	height: 190px;
+	padding: 20px;
+	background-color: white;
+	z-index: -1;
+	transition: 0.5s ease-in-out;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card:hover .content {
+	bottom: -192px;
+}

@@ -20,7 +20,7 @@ const Services = () => {
 				</div>
 			</div>
 			{/* Services body */}
-			<div className='bg-[#f2dab8] p-20'>
+			<div className='bg-[#f2dab8] z-10 p-20 pb-60'>
 				<div className='grid grid-cols-4 justify-between items-center gap-8'>
 					{services.map((service) => (
 						<Service key={service.id} {...service}></Service>
