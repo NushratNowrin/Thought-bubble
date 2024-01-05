@@ -1,6 +1,6 @@
 // import image for personal_and_professional_growth
 import personal_and_professional_growth from "../assets/services/personal_and_professional_growth/personal_and_professional_growth.png";
-import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth_hover.png";
+import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_hover.png";
 import personal_and_professional_growth_banner from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_banner.jpg";
 import personal_and_professional_growth_details from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_details.jpg";
 
