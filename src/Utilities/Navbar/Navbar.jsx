@@ -49,9 +49,9 @@ const Navbar = () => {
 							onClick={() => {
 								setActive("Home");
 							}}>
-							<a href='/'>
+							<Link to='/'>
 								<span>Home</span>
-							</a>
+							</Link>
 						</li>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${

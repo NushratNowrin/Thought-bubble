@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Banner.css";
 
 const Banner = ({ heading, bannerBg, breadcrumbs }) => {
@@ -19,9 +20,9 @@ const Banner = ({ heading, bannerBg, breadcrumbs }) => {
 				<p className='text-white font-[500] -my-5 tracking-wide'>
 					{breadcrumbs.map((item, index) => (
 						<li key={index} className='inline'>
-							<a href={item.url} className='no-underline hover:underline'>
+							<Link to={item.url} className='no-underline hover:underline'>
 								{item.title}
-							</a>
+							</Link>
 							<span> / </span>
 						</li>
 					))}

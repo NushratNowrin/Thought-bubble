@@ -37,12 +37,12 @@ const Service = (service) => {
 	// Slice the description to 20 words
 	const slicedDescription = limitWords(description, 20);
 	return (
-		<div className='relative z-20'>
+		<div className='z-20'>
 			<div
 				style={image_bg}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
-				className='h-72 rounded-xl service-card'>
+				className='h-72 rounded-xl service-card hover:mb-44 transition-all duration-500'>
 				<h3 className='text-white'>{title}</h3>
 				<div className='content rounded-b-xl '>
 					<p className='text-center text-[15px]'>{slicedDescription}...</p>
@@ -50,7 +50,7 @@ const Service = (service) => {
 						<Link to={`/services/${id}`} className='cursor-pointer'>
 							<button
 								style={button_bg}
-								className='px-4 py-[6px] rounded-lg text-white text-[15px] font-medium my-2'>
+								className='px-4 py-[8px] rounded-lg text-white text-[15px] font-medium my-2 details-btn'>
 								Details
 							</button>
 						</Link>

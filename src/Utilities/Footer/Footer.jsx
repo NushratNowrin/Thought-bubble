@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/thought_bubble_logo.gif";
 import "./Footer.css";
 const Footer = () => {
@@ -25,9 +26,9 @@ const Footer = () => {
 							<ul className=' list-none'>
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='/'>
+									<Link to='/'>
 										<span>Home</span>
-									</a>
+									</Link>
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
@@ -37,15 +38,15 @@ const Footer = () => {
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='#service'>
+									<Link to='/services'>
 										<span>Services</span>
-									</a>
+									</Link>
 								</li>
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='/contact'>
+									<Link to='/contact'>
 										<span>Contact</span>
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
