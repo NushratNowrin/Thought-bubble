@@ -1,6 +1,6 @@
-import "./Services.css";
 import { services } from "../../Contents";
 import Service from "./Service/Service";
+import "./Services.css";
 const Services = () => {
 	return (
 		<div>

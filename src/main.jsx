@@ -8,6 +8,8 @@ import Main from "./Layout/Main";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import Services from "./Pages/Services/Services";
+import ServiceDetails from "./Pages/Services/ServiceDetails/ServiceDetails";
+import { services } from "./Contents";
 
 // Basic routing
 const router = createBrowserRouter([
@@ -18,6 +20,18 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home></Home>,
+			},
+			{
+				path: "/services/:id",
+				element: <ServiceDetails></ServiceDetails>,
+				loader: ({ params }) => {
+					const selectedService = services.find(
+						(item) => String(item.id) === params.id
+					);
+
+					// Returning the selected item (or any data you want to pass to the component)
+					return selectedService;
+				},
 			},
 			{
 				path: "/services",

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./Service.css";
+import { Link } from "react-router-dom";
 
 const Service = (service) => {
-	const { title, img, hover_img, color, description } = service;
+	const { id, title, img, hover_img, color, description } = service;
 	const [isHovered, setIsHovered] = useState(false);
 
 	const handleMouseEnter = () => {
@@ -46,13 +47,13 @@ const Service = (service) => {
 				<div className='content rounded-b-xl '>
 					<p className='text-center text-[15px]'>{slicedDescription}...</p>
 					<div className='flex justify-center'>
-						<a href='' className='cursor-pointer'>
+						<Link to={`/services/${id}`} className='cursor-pointer'>
 							<button
 								style={button_bg}
 								className='px-4 py-[6px] rounded-lg text-white text-[15px] font-medium my-2'>
 								Details
 							</button>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
