@@ -1,6 +1,6 @@
 import "./Banner.css";
 
-const Banner = ({ heading, bannerBg, breadcrumbs, breadcrumbsUrl }) => {
+const Banner = ({ heading, bannerBg, breadcrumbs }) => {
 	const BannerBackground = {
 		backgroundImage: `url(${bannerBg})`,
 		backgroundPosition: "center center",
@@ -17,10 +17,15 @@ const Banner = ({ heading, bannerBg, breadcrumbs, breadcrumbsUrl }) => {
 				<h3 className='text-white text-[56px] leading-none'>{heading}</h3>
 				<br />
 				<p className='text-white font-[500] -my-5 tracking-wide'>
-					<a href={breadcrumbsUrl} className='no-underline hover:underline'>
-						{breadcrumbs}
-					</a>{" "}
-					/ <span className='text-amber-400'>{heading}</span>
+					{breadcrumbs.map((item, index) => (
+						<li key={index} className='inline'>
+							<a href={item.url} className='no-underline hover:underline'>
+								{item.title}
+							</a>
+							<span> / </span>
+						</li>
+					))}
+					<span className='text-amber-400'>{heading}</span>
 				</p>
 			</div>
 		</div>

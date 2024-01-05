@@ -12,8 +12,16 @@ const ServiceDetails = () => {
 				<Banner
 					bannerBg={banner_img}
 					heading={title}
-					breadcrumbs={"Home"}
-					breadcrumbsUrl={"/"}></Banner>
+					breadcrumbs={[
+						{
+							title: "Home",
+							url: "/",
+						},
+						{
+							title: "Services",
+							url: "/services",
+						},
+					]}></Banner>
 			</div>
 		</div>
 	);

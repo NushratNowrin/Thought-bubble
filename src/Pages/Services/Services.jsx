@@ -11,8 +11,12 @@ const Services = () => {
 				<Banner
 					bannerBg={servicesBg}
 					heading={"Services"}
-					breadcrumbs={"Home"}
-					breadcrumbsUrl={"/"}></Banner>
+					breadcrumbs={[
+						{
+							title: "Home",
+							url: "/",
+						},
+					]}></Banner>
 			</div>
 			{/* Services body */}
 			<div className='bg-[#f2dab8] z-10 p-20 pb-60'>

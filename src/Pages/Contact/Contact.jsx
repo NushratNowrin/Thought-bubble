@@ -7,8 +7,12 @@ const Contact = () => {
 			<Banner
 				bannerBg={contactBg}
 				heading={"Contact"}
-				breadcrumbs={"Home"}
-				breadcrumbsUrl={"/"}></Banner>
+				breadcrumbs={[
+					{
+						title: "Home",
+						url: "/",
+					},
+				]}></Banner>
 		</div>
 	);
 };
