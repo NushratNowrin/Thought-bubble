@@ -52,6 +52,9 @@ const Service = (service) => {
 						<Link to={`/services/${id}`} className='cursor-pointer'>
 							<button
 								style={button_bg}
+								onClick={() => {
+									window.scrollTo(0, 0);
+								}}
 								className='px-4 py-[4px] rounded-lg text-white text-[15px] font-medium my-2 details-btn'>
 								Details
 							</button>
