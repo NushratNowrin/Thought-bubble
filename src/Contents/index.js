@@ -25,7 +25,7 @@ import relationship_coaching_banner from "../assets/services/relationship_coachi
 import relationship_coaching_details from "../assets/services/relationship_coaching/relationship_coaching_details.jpg";
 
 // import image for talks
-import talks from "../assets/services/talks/talks.png";
+import talks from "../assets/services/talks/talk.png";
 import talks_hover from "../assets/services/talks/talks_hover.png";
 import talks_banner from "../assets/services/talks/talks_banner.png";
 import talks_details from "../assets/services/talks/talks_details.jpeg";

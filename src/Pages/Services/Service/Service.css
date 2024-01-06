@@ -12,6 +12,7 @@
 }
 .service-card:hover .content {
 	bottom: -188px;
+	/* z-index: 20; */
 }
 .details-btn {
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
