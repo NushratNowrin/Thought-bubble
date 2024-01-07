@@ -2,7 +2,7 @@ import Image from "../../../assets/about/Haran-Rasalingam-01.jpg";
 import "./About.css";
 const About = () => {
 	return (
-		<div className='overflow-hidden' id='about'>
+		<div className='overflow-hidden mb-10 ' id='about'>
 			<div className='section-bg px-32 py-20 '>
 				<div className='about-container flex justify-around items-center gap-20'>
 					<div>

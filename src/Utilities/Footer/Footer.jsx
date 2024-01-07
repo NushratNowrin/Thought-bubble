@@ -3,7 +3,7 @@ import logo from "../../assets/thought_bubble_logo.gif";
 import "./Footer.css";
 const Footer = () => {
 	return (
-		<footer className='footer  mt-10 '>
+		<footer className='footer'>
 			<div className='main-footer relative px-52 pt-16 pb-10'>
 				{/* background Overlay */}
 				<div className='absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-80 z-10'></div>

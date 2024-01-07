@@ -1,7 +1,7 @@
 // import image for personal_and_professional_growth
 import personal_and_professional_growth from "../assets/services/personal_and_professional_growth/personal_and_professional_growth.png";
 import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_hover.png";
-import personal_and_professional_growth_banner from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_banner.jpg";
+import personal_and_professional_growth_banner from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_banner.png";
 import personal_and_professional_growth_details from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_details.jpg";
 
 // import image for tough_times
@@ -40,7 +40,7 @@ const services = [
 		details_img: personal_and_professional_growth_details,
 		color: "#B25900",
 		description:
-			"There are many skills and techniques needed in our lives which often don't get taught. Some people have those skills naturally or were lucky enough to have people in their life to show them. But for many of us, this never happened. At Thought-Bubble, we can help you develop and grow valuable life skills to benefit you both personally and professionally. This ranges from learning more about yourself and your values to help you with making key decisions in your life, boosting you self-confidence, to becoming and excellent communicator able to get your ideas across in a compelling way. We can coach you in techniques to facilitate your learning and to enhance your creative process to help you generate exciting new ideas.",
+			"Need some help with finding your path? We can help you make a plan for personal and professional aspects of your life and equip you with the skills and techniques to get you there.",
 		feature: [
 			"Powerful Communication",
 			"Excellent Presentations",
@@ -50,11 +50,11 @@ const services = [
 		],
 		heading: "One-to-One",
 		para1:
-			"One-to-one work really gives you a chance to focus on yourself away from the pressures of family and work. At Thought-Bubble you will have the space and time to explore safely and confidentially any and all aspects of your life, past, present and future.",
-		fees_list: ["85", "65", "from 25"],
+			"There are many skills and techniques needed in our lives which often don't get taught. Some people have those skills naturally or were lucky enough to have people in their life to show them. But for many of us, this never happened.",
+		fees_list: ["300", "200", "from 90"],
 		para2: [
-			"We work with you to find a way forward which suits you and will tailor our approach accordingly.",
-			"Face-to-face is the traditional way to work with clients and we offer this in Finchley. Online work is becoming increasingly popular using Skype, Internet Messaging (IM) and e-mail. This means of working provides greater flexibility for those who find it difficult to get to a session in person.",
+			"At Thought-Bubble, we can help you develop and grow valuable life skills to benefit you both personally and professionally.",
+			"This ranges from learning more about yourself and your values to help you with making key decisions in your life, boosting your self-confidence, and becoming an excellent communicator able to get your ideas across in a compelling way. We can coach you in techniques to facilitate your learning and to enhance your creative process to help you generate exciting new ideas.",
 		],
 	},
 	{

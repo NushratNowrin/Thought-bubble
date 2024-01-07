@@ -1,0 +1,22 @@
+.testimonials-heading {
+	font-family: "Roboto", sans-serif;
+}
+
+.testimonials-heading::before {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 28%;
+	left: -70px;
+	bottom: calc(50% - 1px);
+	background-color: #feb900;
+}
+.testimonials-heading::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 28%;
+	right: -70px;
+	bottom: calc(50% - 1px);
+	background-color: #feb900;
+}
