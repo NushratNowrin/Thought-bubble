@@ -35,7 +35,7 @@ const Hero = () => {
 									onClick={() => {
 										window.scrollTo(0, 0);
 									}}
-									className={`bg-[#dca100] px-4 py-[6px] rounded-lg text-white text-[15px] font-medium my-2 details-btn mt-5`}>
+									className={`bg-gradient-to-b from-[#DDB602] to-[#F39807] px-6 py-2 rounded-3xl text-white font-medium my-2 details-btn mt-5`}>
 									Details
 								</button>
 							</Link>

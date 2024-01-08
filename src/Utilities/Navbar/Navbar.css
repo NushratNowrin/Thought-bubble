@@ -28,15 +28,21 @@
 .submenu {
 	position: absolute;
 	left: 28px;
-	top: calc(100% + 45px);
-	bottom: -2600px;
+	top: calc(100% + 30px); /* Adjusted the top position */
+	opacity: 0; /* Initially set opacity to 0 */
+	visibility: hidden; /* Initially hidden */
 	width: 300px;
 	padding: 10px 0;
 	border-radius: 20px;
 	overflow: hidden;
-	display: none;
 	transition: 0.3s ease-in-out;
-	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.service-menu:hover .submenu {
+	opacity: 1; /* Set opacity to 1 on hover */
+	visibility: visible; /* Make it visible on hover */
+	top: 45px;
+	display: block;
 }
 .submenu li {
 	padding: 10px 20px;
@@ -45,9 +51,4 @@
 .submenu li:hover {
 	background-color: #f9f1dd;
 	color: #feb900;
-}
-.service-menu:hover .submenu {
-	bottom: -260px;
-	top: 45px;
-	display: block;
 }
