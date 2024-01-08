@@ -22,3 +22,32 @@
 	bottom: 5px;
 	background-color: #feb900;
 }
+.service-menu {
+	position: relative;
+}
+.submenu {
+	position: absolute;
+	left: 28px;
+	top: calc(100% + 45px);
+	bottom: -2600px;
+	width: 300px;
+	padding: 10px 0;
+	border-radius: 20px;
+	overflow: hidden;
+	display: none;
+	transition: 0.3s ease-in-out;
+	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+.submenu li {
+	padding: 10px 20px;
+	transition: 0.2s ease-in-out;
+}
+.submenu li:hover {
+	background-color: #f9f1dd;
+	color: #feb900;
+}
+.service-menu:hover .submenu {
+	bottom: -260px;
+	top: 45px;
+	display: block;
+}

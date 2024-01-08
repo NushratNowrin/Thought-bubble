@@ -189,6 +189,7 @@ const services = [
 const testimonials = [
 	{
 		name: "Saul Goodman",
+		nickname: "S G",
 		designation: "Ceo & Founder",
 		image: Testimonial1,
 		star: 5,
@@ -197,6 +198,7 @@ const testimonials = [
 	},
 	{
 		name: "Sara Wilsson",
+		nickname: "S W",
 		designation: "Designer",
 		image: Testimonial2,
 		star: 5,
@@ -205,6 +207,7 @@ const testimonials = [
 	},
 	{
 		name: "Jena Karlis",
+		nickname: "J K",
 		designation: "Store Owner",
 		image: Testimonial3,
 		star: 5,
@@ -213,6 +216,7 @@ const testimonials = [
 	},
 	{
 		name: "Matt Brandon",
+		nickname: "M B",
 		designation: "Freelancer",
 		image: Testimonial4,
 		star: 5,
@@ -222,6 +226,7 @@ const testimonials = [
 
 	{
 		name: "John Larson",
+		name: "J L",
 		designation: "Entrepreneur",
 		image: Testimonial5,
 		star: 5,

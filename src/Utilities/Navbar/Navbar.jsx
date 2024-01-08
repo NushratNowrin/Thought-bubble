@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/thought_bubble_logo.gif";
 import { Link } from "react-router-dom";
+import { services } from "../../Contents";
 import "./Navbar.css";
 
 import { LuMenu } from "react-icons/lu";
@@ -67,7 +68,7 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
 								active === "Services"
 									? "text-white active-link px-1"
 									: "text-[#FFFFFF99] px-1 navmenu"
@@ -75,9 +76,23 @@ const Navbar = () => {
 							onClick={() => {
 								setActive("Services");
 							}}>
-							<Link to='/services'>
+							<Link
+								to='/services'
+								onClick={() => {
+									window.scrollTo(0, 0);
+								}}>
 								<span>Services</span>
 							</Link>
+							<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
+								{services.map((service) => (
+									<Link
+										key={service.id}
+										to={`/services/${service.id}`}
+										className='cursor-pointer'>
+										<li>{service.title}</li>
+									</Link>
+								))}
+							</ul>
 						</li>
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
@@ -88,7 +103,11 @@ const Navbar = () => {
 							onClick={() => {
 								setActive("Contact");
 							}}>
-							<Link to='/contact'>
+							<Link
+								to='/contact'
+								onClick={() => {
+									window.scrollTo(0, 0);
+								}}>
 								<span>Contact</span>
 							</Link>
 						</li>

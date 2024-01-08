@@ -68,7 +68,7 @@ const Testimonial = () => {
 							className='bg-white rounded-lg testimonial-card'>
 							<div className='p-10 pt-16 text-center mx-10'>
 								<div className='text-[18px] font-[700] mb-2 text-black testimonial-heading'>
-									{testimonial.name}
+									{testimonial.nickname}
 								</div>
 								<div className='text-[#999999] text-sm font-medium testimonial-designation'>
 									{testimonial.designation}
