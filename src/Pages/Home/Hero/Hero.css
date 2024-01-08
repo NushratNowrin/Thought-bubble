@@ -1,0 +1,20 @@
+.awssld__container figure,
+.awssld__box {
+	height: 90%;
+}
+.awssld {
+	--slider-height-percentage: 45%;
+}
+.awssld__controls button {
+	top: 30%;
+}
+.awssld__bullets {
+	bottom: 80px;
+}
+.details-btn {
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.details-btn:hover {
+	transform: scale(1.2);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}

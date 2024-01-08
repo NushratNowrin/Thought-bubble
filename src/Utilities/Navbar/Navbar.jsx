@@ -13,7 +13,7 @@ const Navbar = () => {
 	const [navBg, setNavbg] = useState(false);
 
 	const changeBg = () => {
-		if (window.scrollY >= 100) {
+		if (window.scrollY >= 80) {
 			setNavbg(true);
 		} else {
 			setNavbg(false);
@@ -27,9 +27,9 @@ const Navbar = () => {
 				className={`${
 					navBg === true
 						? "bg-black bg-opacity-70 transition-all duration-100 ease-linear"
-						: "bg-transparent"
-				} w-full  py-[10px] fixed top-0 z-50`}>
-				<div className='flex justify-evenly items-center mx-16 px-4'>
+						: "bg-transparent py-[10px] px-4"
+				} w-full  fixed top-0 z-50`}>
+				<div className='flex justify-evenly items-center mx-16'>
 					<Link
 						to='/'
 						className='flex items-center mr-[6px]'

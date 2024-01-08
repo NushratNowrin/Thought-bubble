@@ -17,6 +17,7 @@ import teenage_mentoring_hover from "../assets/services/teenage_mentoring/teenag
 // import image for Team Building Workshops
 import team_building_workshop from "../assets/services/team_building_workshop/team_building_workshop.png";
 import team_building_workshop_hover from "../assets/services/team_building_workshop/team_building_workshop_hover.png";
+import team_building_workshop_details from "../assets/services/team_building_workshop/team_building_workshop_details.png";
 
 // import image for relationship_coaching
 import relationship_coaching from "../assets/services/relationship_coaching/relationship_coaching.png";
@@ -36,6 +37,14 @@ import Testimonial2 from "../assets/home/Testimonials/testimonial_2.png";
 import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
 import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
 import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
+
+// import images for Hero Section
+import image1 from "../assets/home/Hero/personal_and_professional_growth_details.jpg";
+import image2 from "../assets/home/Hero/tough_times_details.jpg";
+import image3 from "../assets/home/Hero/talks_details.jpeg";
+import image4 from "../assets/home/Hero/team_building_workshop_details.png";
+import image5 from "../assets/home/Hero/relationship_coaching_details.jpg";
+import image6 from "../assets/home/Hero/talks_details.jpeg";
 
 const services = [
 	{
@@ -138,12 +147,14 @@ const services = [
 		img: team_building_workshop,
 		hover_img: team_building_workshop_hover,
 		banner_img: talks_banner,
-		details_img: talks_details,
+		details_img: team_building_workshop_details,
 		color: "#54D189",
-		description: "",
+		description:
+			"Want to create a high-performing team? So often in professional life, groups of people are put together and called a “team”. But rarely is much effort put into actually making a team.",
 		feature: [],
 		heading: "",
-		para1: "",
+		para1:
+			"At Thought-Bubble, we run workshops for both new and established teams to improve the dynamics of the team, bringing out the very best of the range of talents in the group and learning to support and help each other to reach high-performance.",
 		fees_list: [],
 		para2: [""],
 	},
@@ -218,4 +229,5 @@ const testimonials = [
 			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
 	},
 ];
+
 export { services, testimonials };

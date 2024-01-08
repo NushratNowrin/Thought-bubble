@@ -34,7 +34,7 @@
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .swiper {
-	overflow: visible;
+	/* overflow: visible; */
 	padding: 80px 0;
 }
 .swiper-pagination-bullet {
