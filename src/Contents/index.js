@@ -30,6 +30,13 @@ import talks_hover from "../assets/services/talks/talks_hover.png";
 import talks_banner from "../assets/services/talks/talks_banner.png";
 import talks_details from "../assets/services/talks/talks_details.jpeg";
 
+// import images for testimonials
+import Testimonial1 from "../assets/home/Testimonials/testimonial_1.png";
+import Testimonial2 from "../assets/home/Testimonials/testimonial_2.png";
+import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
+import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
+import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
+
 const services = [
 	{
 		id: "personal_and_professional_growth",
@@ -167,4 +174,48 @@ const services = [
 		],
 	},
 ];
-export { services };
+
+const testimonials = [
+	{
+		name: "Saul Goodman",
+		designation: "Ceo & Founder",
+		image: Testimonial1,
+		star: 5,
+		review:
+			"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
+	},
+	{
+		name: "Sara Wilsson",
+		designation: "Designer",
+		image: Testimonial2,
+		star: 5,
+		review:
+			"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+	},
+	{
+		name: "Jena Karlis",
+		designation: "Store Owner",
+		image: Testimonial3,
+		star: 5,
+		review:
+			"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+	},
+	{
+		name: "Matt Brandon",
+		designation: "Freelancer",
+		image: Testimonial4,
+		star: 5,
+		review:
+			"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+	},
+
+	{
+		name: "John Larson",
+		designation: "Entrepreneur",
+		image: Testimonial5,
+		star: 5,
+		review:
+			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+	},
+];
+export { services, testimonials };
