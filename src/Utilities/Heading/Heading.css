@@ -1,0 +1,25 @@
+.section-heading {
+	font-family: "Roboto", sans-serif;
+}
+
+.section-heading::before {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 28%;
+	left: -70px;
+	bottom: calc(50% - 1px);
+	background-color: #feb900;
+}
+.section-heading::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 28%;
+	right: -70px;
+	bottom: calc(50% - 1px);
+	background-color: #feb900;
+}
+.section-heading {
+	font-family: "Roboto", sans-serif;
+}

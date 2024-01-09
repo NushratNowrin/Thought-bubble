@@ -5,17 +5,8 @@ import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
 	const serviceData = useLoaderData();
-	const {
-		title,
-		banner_img,
-		details_img,
-		description,
-		feature,
-		heading,
-		para1,
-		fees_list,
-		para2,
-	} = serviceData;
+	const { title, banner_img, details_img, description, heading, para1, para2 } =
+		serviceData;
 	console.log(serviceData);
 	return (
 		<div>
@@ -47,13 +38,13 @@ const ServiceDetails = () => {
 						<p className='text-[#4a4d4a] text-[15px] mt-2 mb-5'>
 							{description}
 						</p>
-						{feature.map((item, index) => (
+						{/* {feature.map((item, index) => (
 							<li
 								key={index}
 								className='text-[#4a4d4a] text-base list-inside list-none py-1 flex items-center gap-2'>
 								<GoCheckCircle className='text-[#feb900] text-xl' /> {item}
 							</li>
-						))}
+						))} */}
 					</div>
 					{/* main content */}
 					<div className='col-span-2'>
@@ -66,14 +57,14 @@ const ServiceDetails = () => {
 							</h2>
 							<p className='text-[#4a4d4a] text-[15px] mt-2'>{para1}</p>
 							<div className='my-5'>
-								{fees_list.map((item, index) => (
+								{/* {fees_list.map((item, index) => (
 									<li
 										key={index}
 										className='text-[#4a4d4a] text-base list-inside list-none py-1 flex items-center gap-2'>
 										<GoCheckCircle className='text-[#feb900] text-xl' /> In
 										person: £{item}
 									</li>
-								))}
+								))} */}
 							</div>
 							{para2.map((item, index) => (
 								<p

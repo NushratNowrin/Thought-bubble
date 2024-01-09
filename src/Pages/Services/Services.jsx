@@ -1,6 +1,7 @@
 import servicesBg from "../../assets/services/services.jpg";
 import { services } from "../../Contents";
 import Banner from "../../Utilities/Banner/Banner";
+import PriceList from "./PriceList/PriceList";
 import Service from "./Service/Service";
 import "./Services.css";
 const Services = () => {
@@ -25,6 +26,11 @@ const Services = () => {
 						<Service key={service.id} {...service}></Service>
 					))}
 				</div>
+			</div>
+
+			{/* Price List */}
+			<div className='bg-gray-200 py-20'>
+				<PriceList></PriceList>
 			</div>
 		</div>
 	);
