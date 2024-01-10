@@ -5,8 +5,17 @@ import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
 	const serviceData = useLoaderData();
-	const { title, banner_img, details_img, description, heading, para1, para2 } =
-		serviceData;
+	const {
+		title,
+		banner_img,
+		details_img,
+		description,
+		priceList,
+		heading,
+		para1,
+		para2,
+	} = serviceData;
+	const { packs, chooseForm } = priceList;
 	console.log(serviceData);
 	return (
 		<div>
@@ -31,50 +40,82 @@ const ServiceDetails = () => {
 			<div className='p-20'>
 				<div className='grid grid-cols-2 gap-4 justify-center'>
 					{/* side content */}
-					<div className="">
+					<div className=''>
 						<h4 className='text-[#252625] text-xl font-[700] service-details-title'>
 							{title}
 						</h4>
 						<p className='text-[#4a4d4a] text-[15px] mt-2 mb-5'>
 							{description}
 						</p>
-						{/* {feature.map((item, index) => (
-							<li
-								key={index}
-								className='text-[#4a4d4a] text-base list-inside list-none py-1 flex items-center gap-2'>
-								<GoCheckCircle className='text-[#feb900] text-xl' /> {item}
-							</li>
-						))} */}
-					</div>
-					{/* main content */}
-					<div className=''>
-						<div>
-							<img className='w-[100%]' src={details_img} alt='' />
-						</div>
-						<div>
-							<h2 className='pt-5 pb-1 text-[28px] text-[#4a4d4a] font-[700] service-details-heading'>
-								{heading}
-							</h2>
-							<p className='text-[#4a4d4a] text-[15px] mt-2'>{para1}</p>
-							<div className='my-5'>
-								{/* {fees_list.map((item, index) => (
-									<li
-										key={index}
-										className='text-[#4a4d4a] text-base list-inside list-none py-1 flex items-center gap-2'>
-										<GoCheckCircle className='text-[#feb900] text-xl' /> In
-										person: £{item}
-									</li>
-								))} */}
+						{/* Price list */}
+						<div className='text-center '>
+							<div className='font-medium'>
+								<div className='grid grid-cols-3 justify-between items-center gap-1 bg-amber-500 text-white'>
+									<div></div>
+									<div className='col-span-2 font-semibold'>
+										<div className='grid grid-cols-3 items-center'>
+											<div>In Person</div>
+											<div>Online</div>
+											<div>Reductions</div>
+										</div>
+									</div>
+								</div>
+								{packs.map((singlePack, index) => (
+									<div key={index}>
+										<div className='grid grid-cols-3 justify-between items-center bg-amber-100'>
+											<div className=' text-black bg-amber-200'>
+												{singlePack.pack[0]}
+											</div>
+											<div className='col-span-2'>
+												<div className='grid grid-cols-3 items-center'>
+													{singlePack.pack[1].map((elem, innerIndex) => (
+														<div key={innerIndex} className=' text-black mx-1'>
+															{elem}
+														</div>
+													))}
+												</div>
+											</div>
+										</div>
+									</div>
+								))}
+								<div className='grid grid-cols-3 justify-between items-center gap-1 my-2 bg-amber-200'>
+									<div className=' text-black '>
+										<div className=' text-black'>{chooseForm[0]}</div>
+									</div>
+									<div className='col-span-2'>
+										<div className='bg-amber-100 py-2'>
+											{chooseForm[1]?.map((element, index) => (
+												<div
+													key={index}
+													className=' text-black text-left mx-2 flex items-center gap-2'>
+													<GoCheckCircle className='text-[#feb900] text-xl' />
+													{element}
+												</div>
+											))}
+										</div>
+									</div>
+								</div>
 							</div>
-							{para2.map((item, index) => (
-								<p
-									key={index}
-									className='text-[#4a4d4a] text-[15px] mt-2 mb-5 '>
-									{item}
-								</p>
-							))}
 						</div>
 					</div>
+					{/* img */}
+					<div>
+						<img className='h-[100%]' src={details_img} alt='' />
+					</div>
+					<div className=''></div>
+				</div>
+				{/* Para */}
+				<div className=''>
+					<h2 className='pt-5 pb-1 text-[28px] text-[#4a4d4a] font-[700] service-details-heading'>
+						{heading}
+					</h2>
+					<p className='text-[#4a4d4a] text-[15px] mt-2'>{para1}</p>
+					<div className='my-5'></div>
+					{para2.map((item, index) => (
+						<p key={index} className='text-[#4a4d4a] text-[15px] mt-2 mb-5 '>
+							{item}
+						</p>
+					))}
 				</div>
 			</div>
 		</div>
