@@ -1,6 +1,8 @@
 import contactBg from "../../assets/contact/Contact-bg.jpg";
 import Banner from "../../Utilities/Banner/Banner";
+import Capcha from "./Capcha/Capcha";
 import "./Contact.css";
+import ContactForm from "./ContactForm/ContactForm";
 const Contact = () => {
 	return (
 		<div>
@@ -13,6 +15,9 @@ const Contact = () => {
 						url: "/",
 					},
 				]}></Banner>
+
+			<ContactForm></ContactForm>
+			<Capcha></Capcha>
 		</div>
 	);
 };

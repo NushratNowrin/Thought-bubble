@@ -231,7 +231,7 @@ const services = [
 		priceList: {
 			packs: [
 				{
-					pack: ["including: ", ["£25", "£10", "£5"]],
+					pack: ["1-hour talks with Q & A: ", ["£25", "£10", "£5"]],
 				},
 			],
 			chooseForm: [
