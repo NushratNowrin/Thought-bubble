@@ -50,18 +50,18 @@ const services = [
 		description:
 			"Need some help with finding your path? We can help you make a plan for personal and professional aspects of your life and equip you with the skills and techniques to get you there.",
 		priceList: {
-			package: [
+			packs: [
 				{
-					perPerson: ["Per Session: ", ["85", "65", "from 25"]],
+					pack: ["Per Session: ", ["£85", "£65", "from £25"]],
 				},
 				{
-					sessionPack: ["4-Session Pack: ", ["300", "200", "from 90"]],
+					pack: ["4-Session Pack: ", ["£300", "£200", "from £90"]],
 				},
 			],
 			chooseForm: [
 				"Choose From",
 				[
-					"Plan ypur Path",
+					"Plan your Path",
 					"Self-Confident",
 					"Identity",
 					"Embracing your Diversity",
@@ -92,17 +92,17 @@ const services = [
 		description:
 			"Life can take its toll on mental health and wellbeing. Some issues can be sudden or intermittent, others long-term. Some may be caused by a sudden crisis, others by childhood traumas, and some may be a complex mixture of things both internal and external, past and present. At Thought-Bubble, we offer a range of psychological and therapeutic interventions to help you whatever the issue, drawing on a range of approaches including: Cognitive Behavioural Therapy (CBT), Existential Therapy, NLP, Psychodynamic Counselling, Gestalt Therapy and Hypnotherapy.",
 		priceList: {
-			package: [
+			packs: [
 				{
-					perPerson: ["Per Session: ", ["85", "65", "from 25"]],
+					pack: ["Per Session: ", ["£85", "£65", "from £25"]],
 				},
 				{
-					sessionPack: ["4-Session Pack: ", ["300", "200", "from 90"]],
+					pack: ["4-Session Pack: ", ["£300", "£200", "from £90"]],
 				},
 				{
-					plusPack: [
+					pack: [
 						"Plus Stop Smoking Hypnotherapy (stop in 1 session): ",
-						["250", "N/A", "N/A"],
+						["£250", "N/A", "N/A"],
 					],
 				},
 			],
@@ -143,11 +143,11 @@ const services = [
 		description:
 			"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network. Relationship coaching works best when both people can attend sessions together. At Thought-Bubble, whatever the problem might be, we will work with you in a non-judgemental way. We focus on trying to help couples develop a constructive dialogue with each other, to gain an understanding of themselves and each other both as individuals and as part of a couple. And we make no presumptions about couples staying together or separating, so whatever the future holds for the relationship, helping both parties to work through difficulties constructively is our goal.",
 		priceList: {
-			package: [
+			packs: [
 				{
-					sessionPack: [
+					pack: [
 						"4-session pack with email support: ",
-						["375", "295", "from 100"],
+						["£375", "£295", "from £100"],
 					],
 				},
 			],
@@ -173,13 +173,14 @@ const services = [
 		color: "#7A92CC",
 		description: "",
 		priceList: {
-			package: [
+			packs: [
 				{
-					sessionPack: ["4-Session Pack: ", ["300", "200", "from 90"]],
+					pack: ["4-Session Pack: ", ["£300", "£200", "from £90"]],
 				},
 			],
 			chooseForm: [
-				"Where are you at, where do you want to go, how to get there",
+				"Choose Form",
+				["Where are you at", "where do you want to go", "how to get there"],
 			],
 		},
 
@@ -199,9 +200,9 @@ const services = [
 		description:
 			"Want to create a high-performing team? So often in professional life, groups of people are put together and called a “team”. But rarely is much effort put into actually making a team.",
 		priceList: {
-			package: [
+			packs: [
 				{
-					sessionPack: ["2-hours Sessions: ", ["500", "200", "N/A"]],
+					pack: ["2-hours Sessions: ", ["£500", "£200", "N/A"]],
 				},
 			],
 			chooseForm: [
@@ -231,9 +232,9 @@ const services = [
 		description:
 			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger. At Thought-Bubble, we help people make sense of it all through workshops, discussions and talks on specific topics. We also run sessions for teams to help team members understand each other and work together better.",
 		priceList: {
-			package: [
+			packs: [
 				{
-					perPerson: ["including: ", ["25", "10", "5"]],
+					pack: ["including: ", ["£25", "£10", "£5"]],
 				},
 			],
 			chooseForm: [

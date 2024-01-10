@@ -1,7 +1,7 @@
 import servicesBg from "../../assets/services/services.jpg";
 import { services } from "../../Contents";
 import Banner from "../../Utilities/Banner/Banner";
-import PriceList from "./PriceList/PriceList";
+import PriceLists from "./PriceLists/PriceLists";
 import Service from "./Service/Service";
 import "./Services.css";
 const Services = () => {
@@ -29,8 +29,8 @@ const Services = () => {
 			</div>
 
 			{/* Price List */}
-			<div className='bg-gray-200 py-20'>
-				<PriceList></PriceList>
+			<div className='bg-neutral-100 py-20'>
+				<PriceLists></PriceLists>
 			</div>
 		</div>
 	);

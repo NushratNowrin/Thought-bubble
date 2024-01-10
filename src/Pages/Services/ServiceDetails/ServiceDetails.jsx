@@ -29,9 +29,9 @@ const ServiceDetails = () => {
 
 			{/* Service Details */}
 			<div className='p-20'>
-				<div className='grid grid-cols-3 gap-4 justify-center'>
+				<div className='grid grid-cols-2 gap-4 justify-center'>
 					{/* side content */}
-					<div>
+					<div className="">
 						<h4 className='text-[#252625] text-xl font-[700] service-details-title'>
 							{title}
 						</h4>
@@ -47,7 +47,7 @@ const ServiceDetails = () => {
 						))} */}
 					</div>
 					{/* main content */}
-					<div className='col-span-2'>
+					<div className=''>
 						<div>
 							<img className='w-[100%]' src={details_img} alt='' />
 						</div>
