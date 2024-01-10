@@ -3,12 +3,12 @@ const PriceList = ({ title, pricelist }) => {
 	const { packs, chooseForm } = pricelist;
 
 	return (
-		<div className='bg-slate-600 my-5 p-5 rounded-lg text-center'>
+		<div className='bg-slate-600 my-10 p-5 rounded-lg text-center'>
 			<h2 className='text-white font-semibold text-xl mb-2'>{title}</h2>
 			<div className='font-medium'>
-				<div className='grid grid-cols-3 justify-between items-center gap-1 m-2 bg-amber-500 text-white'>
+				<div className='grid grid-cols-3 justify-between items-center gap-1 m-2 my-1 bg-amber-500 text-white'>
 					<div></div>
-					<div className='col-span-2 font-semibold'>
+					<div className='col-span-2  font-semibold'>
 						<div className='grid grid-cols-3 items-center'>
 							<div>In Person</div>
 							<div>Online</div>
@@ -18,7 +18,7 @@ const PriceList = ({ title, pricelist }) => {
 				</div>
 				{packs.map((singlePack, index) => (
 					<div key={index}>
-						<div className='grid grid-cols-3 justify-between items-center  m-2 bg-amber-100'>
+						<div className='grid grid-cols-3 justify-between items-center  m-2 my-1 bg-amber-100'>
 							<div className=' text-black bg-amber-200'>
 								{singlePack.pack[0]}
 							</div>

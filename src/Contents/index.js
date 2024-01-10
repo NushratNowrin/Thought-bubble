@@ -2,12 +2,12 @@
 import personal_and_professional_growth from "../assets/services/personal_and_professional_growth/personal_and_professional_growth.png";
 import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_hover.png";
 import personal_and_professional_growth_banner from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_banner.png";
-import personal_and_professional_growth_details from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_details.jpg";
+import personal_and_professional_growth_details from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_details.png";
 
 // import image for tough_times
 import tough_times from "../assets/services/tough_times/tough_times.png";
 import tough_times_hover from "../assets/services/tough_times/tough_times_hover.png";
-import tough_times_banner from "../assets/services/tough_times/tough_times_banner.jpeg";
+import tough_times_banner from "../assets/services/tough_times/tough_times_banner.png";
 import tough_times_details from "../assets/services/tough_times/tough_times_details.jpg";
 
 // import image for Teenage Mentoring
@@ -90,7 +90,7 @@ const services = [
 		details_img: tough_times_details,
 		color: "#A1A1A1",
 		description:
-			"Life can take its toll on mental health and wellbeing. Some issues can be sudden or intermittent, others long-term. Some may be caused by a sudden crisis, others by childhood traumas, and some may be a complex mixture of things both internal and external, past and present. At Thought-Bubble, we offer a range of psychological and therapeutic interventions to help you whatever the issue, drawing on a range of approaches including: Cognitive Behavioural Therapy (CBT), Existential Therapy, NLP, Psychodynamic Counselling, Gestalt Therapy and Hypnotherapy.",
+			"Your mental health is essential for wellbeing. And life can take its toll on it. Whether a longstanding issue or a sudden crisis, we can help. ",
 		priceList: {
 			packs: [
 				{
@@ -124,12 +124,9 @@ const services = [
 		},
 		heading: "Counselling and Psychotherapy",
 		para1:
-			"We work one-to-one with individuals, as well as with couples and with groups to help people get to grips with difficulties and to make the most out of their lives.",
+			"Some issues can be sudden or intermittent, others long-term. Some may be caused by a sudden crisis, others by childhood traumas, and some may be a complex mixture of things both internal and external, past and present. ",
 		para2: [
-			"About Counselling: counselling tends to be focused on a single issue which is worked on with a set goal in mind for six sessions.",
-			"About Psychotherapy: psychotherapy explores more than a single issue and will look at the interconnections between different aspects of your life. The goals may be more open-ended, but we will still start with six sessions and then review.",
-			"At Thought-Bubble we have a range of approaches to suit your needs, including: Cognitive Behavioural Therapy (CBT), Existential Therapy, NLP, Psychodynamic Counselling, Gestalt Therapy and Hypnotherapy.",
-			"All Thought-Bubble clients have an initial consultation session during which we work with you to decide on the appropriate course of action.",
+			"At Thought-Bubble, we offer a range of psychological and therapeutic interventions to help you whatever the issue, drawing on a range of approaches including: Cognitive Behavioural Therapy (CBT), Existential Therapy, NLP, Psychodynamic Counselling, Gestalt Therapy and Hypnotherapy",
 		],
 	},
 	{

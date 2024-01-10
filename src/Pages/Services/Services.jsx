@@ -29,7 +29,7 @@ const Services = () => {
 			</div>
 
 			{/* Price List */}
-			<div className='bg-neutral-100 py-20'>
+			<div className='bg-white py-20'>
 				<PriceLists></PriceLists>
 			</div>
 		</div>

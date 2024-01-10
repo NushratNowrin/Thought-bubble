@@ -50,7 +50,7 @@ const ServiceDetails = () => {
 						{/* Price list */}
 						<div className='text-center '>
 							<div className='font-medium'>
-								<div className='grid grid-cols-3 justify-between items-center gap-1 bg-amber-500 text-white'>
+								<div className='grid grid-cols-3 justify-between items-center gap-1 bg-amber-300 text-white'>
 									<div></div>
 									<div className='col-span-2 font-semibold'>
 										<div className='grid grid-cols-3 items-center'>
@@ -62,7 +62,7 @@ const ServiceDetails = () => {
 								</div>
 								{packs.map((singlePack, index) => (
 									<div key={index}>
-										<div className='grid grid-cols-3 justify-between items-center bg-amber-100'>
+										<div className='grid grid-cols-3 justify-between items-center bg-amber-100 my-[1px]'>
 											<div className=' text-black bg-amber-200'>
 												{singlePack.pack[0]}
 											</div>
