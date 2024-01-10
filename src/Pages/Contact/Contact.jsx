@@ -17,7 +17,6 @@ const Contact = () => {
 				]}></Banner>
 
 			<ContactForm></ContactForm>
-			<Capcha></Capcha>
 		</div>
 	);
 };

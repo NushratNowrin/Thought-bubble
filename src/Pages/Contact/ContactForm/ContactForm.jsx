@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Heading from "../../../Utilities/Heading/Heading";
+import Capcha from "../Capcha/Capcha";
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const ContactForm = () => {
 	const [submitted, setSubmitted] = useState(false);
 	const [showError, setShowError] = useState("");
 	const [success, setSuccess] = useState("");
+	const [isVerified] = useState(false);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,6 +30,12 @@ const ContactForm = () => {
 
 		setSuccess("");
 		setShowError("");
+		if (isVerified) {
+			// Proceed with your form submission logic
+			console.log("Form submitted!");
+		} else {
+			console.log("Please complete the reCAPTCHA verification.");
+		}
 
 		try {
 			// Sending form data to the server
@@ -118,6 +126,8 @@ const ContactForm = () => {
 							className='form-input w-[100%] px-3 py-2 mt-2 rounded-lg'
 							rows='3'></textarea>
 					</div>
+					{/* Recapcha */}
+					<Capcha></Capcha>
 					<div className='text-amber-700 font-bold mb-3'>{showError}</div>
 					<div className='text-green-600 mb-3'>{success}</div>
 					<div className='w-[100%] text-center'>
