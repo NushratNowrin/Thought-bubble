@@ -20,6 +20,10 @@ const Navbar = () => {
 		}
 	};
 
+	const viewportHeight =
+		window.innerHeight || document.documentElement.clientHeight;
+	const scrollPosition = (viewportHeight * 90) / 100;
+
 	window.addEventListener("scroll", changeBg);
 	return (
 		<nav>
@@ -58,7 +62,11 @@ const Navbar = () => {
 							</li>
 						</Link>
 
-						<a href='./#about'>
+						<Link
+							to='/#about'
+							onClick={() => {
+								window.scrollTo(0, scrollPosition);
+							}}>
 							<li
 								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
 									active === "About"
@@ -70,7 +78,7 @@ const Navbar = () => {
 								}}>
 								<span>About</span>
 							</li>
-						</a>
+						</Link>
 
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
@@ -154,7 +162,11 @@ const Navbar = () => {
 									</li>
 								</Link>
 
-								<a href='./#about'>
+								<Link
+									href='/#about'
+									onClick={() => {
+										window.scrollTo(0, scrollPosition);
+									}}>
 									<li
 										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
 											active === "About"
@@ -167,7 +179,7 @@ const Navbar = () => {
 										}}>
 										<span>About</span>
 									</li>
-								</a>
+								</Link>
 								<li
 									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
 										active === "Services"
