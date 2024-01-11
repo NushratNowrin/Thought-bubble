@@ -73,7 +73,7 @@ const services = [
 				],
 			],
 		},
-		heading: "One-to-One",
+		heading: "",
 		para1:
 			"There are many skills and techniques needed in our lives which often don't get taught. Some people have those skills naturally or were lucky enough to have people in their life to show them. But for many of us, this never happened.",
 		para2: [
@@ -122,7 +122,7 @@ const services = [
 				],
 			],
 		},
-		heading: "Counselling and Psychotherapy",
+		heading: "",
 		para1:
 			"Some issues can be sudden or intermittent, others long-term. Some may be caused by a sudden crisis, others by childhood traumas, and some may be a complex mixture of things both internal and external, past and present. ",
 		para2: [
@@ -138,7 +138,7 @@ const services = [
 		details_img: relationship_coaching_details,
 		color: "#FAA87A",
 		description:
-			"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network. Relationship coaching works best when both people can attend sessions together. At Thought-Bubble, whatever the problem might be, we will work with you in a non-judgemental way. We focus on trying to help couples develop a constructive dialogue with each other, to gain an understanding of themselves and each other both as individuals and as part of a couple. And we make no presumptions about couples staying together or separating, so whatever the future holds for the relationship, helping both parties to work through difficulties constructively is our goal.",
+			"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network. Relationship coaching works best when both people can attend sessions together. At Thought-Bubble, whatever the problem might be, we will work with you in a non-judgemental way.",
 		priceList: {
 			packs: [
 				{
@@ -151,13 +151,12 @@ const services = [
 			chooseForm: [],
 		},
 
-		heading: "Couples Counselling and Couples Coaching",
+		heading: "",
 		para1:
-			"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network.",
+			"Relationship coaching works best when both people can attend sessions together. We focus on trying to help couples develop a constructive dialogue with each other, to gain an understanding of themselves and each other both as individuals and as part of a couple.",
 
 		para2: [
-			"While some people come for one-to-one sessions to deal with relationship problems, it is almost always preferable if both people in a couple can attend sessions together to work out a way forward.",
-			" At Thought-Bubble, whatever the problem might be, we will work with you. We focus on trying to help couples develop a constructive dialogue with each other, to gain an understanding of themselves and each other both as individuals and as part of a couple. We make no presumptions about either keeping a couple together or breaking it up.",
+			"And we make no presumptions about couples staying together or separating, so whatever the future holds for the relationship, helping both parties to work through difficulties constructively is our goal.",
 		],
 	},
 	{

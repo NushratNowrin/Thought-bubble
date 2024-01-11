@@ -39,7 +39,10 @@ const ContactForm = () => {
 
 		try {
 			// Sending form data to the server
-			const response = await axios.post("/your-server-endpoint", formData);
+			const response = await axios.post(
+				"/thought-bubble.co.uk/contact.php",
+				formData
+			);
 
 			const successMessage =
 				response.data ||

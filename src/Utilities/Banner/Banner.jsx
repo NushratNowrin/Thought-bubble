@@ -7,7 +7,7 @@ const Banner = ({ heading, bannerBg, breadcrumbs }) => {
 		backgroundPosition: "center center",
 		backgroundRepeat: "no-repeat",
 		minHeight: "49vh",
-		backgroundSize: "cover",
+		backgroundSize: "contain",
 	};
 	return (
 		<div className=' relative' style={BannerBackground}>

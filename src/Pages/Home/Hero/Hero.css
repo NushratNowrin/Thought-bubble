@@ -1,6 +1,6 @@
 .awssld__container figure,
 .awssld__box {
-	height: 90%;
+	height: 100%;
 }
 .awssld {
 	--slider-height-percentage: 45%;

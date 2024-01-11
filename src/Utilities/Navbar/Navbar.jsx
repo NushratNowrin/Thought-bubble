@@ -6,7 +6,6 @@ import "./Navbar.css";
 
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
-import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
@@ -41,32 +40,38 @@ const Navbar = () => {
 					</Link>
 
 					<ul className=' list-none hidden sm:flex flex-row m-0 p-0'>
-						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-								active === "Home"
-									? "text-white active-link px-1"
-									: "text-[#FFFFFF99] px-1 navmenu"
-							} hover:text-white font-medium cursor-pointer`}
+						<Link
+							to='/'
 							onClick={() => {
-								setActive("Home");
+								window.scrollTo(0, 0);
 							}}>
-							<Link to='/'>
+							<li
+								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+									active === "Home"
+										? "text-white active-link px-1"
+										: "text-[#FFFFFF99] px-1 navmenu"
+								} hover:text-white font-medium cursor-pointer`}
+								onClick={() => {
+									setActive("Home");
+								}}>
 								<span>Home</span>
-							</Link>
-						</li>
-						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-								active === "About"
-									? "text-white active-link px-1"
-									: "text-[#FFFFFF99] px-1 navmenu"
-							} hover:text-white font-medium cursor-pointer`}
-							onClick={() => {
-								setActive("About");
-							}}>
-							<a href='./#about'>
+							</li>
+						</Link>
+
+						<a href='./#about'>
+							<li
+								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+									active === "About"
+										? "text-white active-link px-1"
+										: "text-[#FFFFFF99] px-1 navmenu"
+								} hover:text-white font-medium cursor-pointer`}
+								onClick={() => {
+									setActive("About");
+								}}>
 								<span>About</span>
-							</a>
-						</li>
+							</li>
+						</a>
+
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
 								active === "Services"
@@ -94,23 +99,24 @@ const Navbar = () => {
 								))}
 							</ul>
 						</li>
-						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-								active === "Contact"
-									? "text-white active-link px-1"
-									: "text-[#FFFFFF99] px-1 navmenu"
-							} hover:text-white font-medium cursor-pointer`}
+
+						<Link
+							to='/contact'
 							onClick={() => {
-								setActive("Contact");
+								window.scrollTo(0, 0);
 							}}>
-							<Link
-								to='/contact'
+							<li
+								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+									active === "Contact"
+										? "text-white active-link px-1"
+										: "text-[#FFFFFF99] px-1 navmenu"
+								} hover:text-white font-medium cursor-pointer`}
 								onClick={() => {
-									window.scrollTo(0, 0);
+									setActive("Contact");
 								}}>
 								<span>Contact</span>
-							</Link>
-						</li>
+							</li>
+						</Link>
 					</ul>
 
 					{/* for mobile menu */}
@@ -129,42 +135,85 @@ const Navbar = () => {
 								!toggle ? "hidden" : "flex"
 							} p-6 bg-black bg-opacity-90 absolute top-0 right-0 left-0 my-20 w-full z-10 transition-all ease-in-out duration-1000`}>
 							<ul className='list-none flex flex-col justify-end items-start gap-4'>
-								<li
-									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}
+								<Link
+									to='/'
 									onClick={() => {
-										setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
+										window.scrollTo(0, 0);
 									}}>
-									<ActiveLink to='/' className=' px-1'>
-										Home
-									</ActiveLink>
-								</li>
+									<li
+										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+											active === "Home"
+												? "text-white active-link px-1"
+												: "text-[#FFFFFF99] px-1 navmenu"
+										} hover:text-white font-medium cursor-pointer`}
+										onClick={() => {
+											setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
+											setActive("Home");
+										}}>
+										<span>Home</span>
+									</li>
+								</Link>
+
+								<a href='./#about'>
+									<li
+										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+											active === "About"
+												? "text-white active-link px-1"
+												: "text-[#FFFFFF99] px-1 navmenu"
+										} hover:text-white font-medium cursor-pointer`}
+										onClick={() => {
+											setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
+											setActive("About");
+										}}>
+										<span>About</span>
+									</li>
+								</a>
 								<li
-									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}
+									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
+										active === "Services"
+											? "text-white active-link px-1"
+											: "text-[#FFFFFF99] px-1 navmenu"
+									} hover:text-white font-medium cursor-pointer`}
 									onClick={() => {
-										setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
+										setActive("Services");
+										setToggle(!toggle);
 									}}>
-									<ActiveLink to='/about' className=' px-1'>
-										About
-									</ActiveLink>
+									<Link
+										to='/services'
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}>
+										<span>Services</span>
+									</Link>
+									<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
+										{services.map((service) => (
+											<Link
+												key={service.id}
+												to={`/services/${service.id}`}
+												className='cursor-pointer'>
+												<li>{service.title}</li>
+											</Link>
+										))}
+									</ul>
 								</li>
-								<li
-									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}
+								<Link
+									to='/contact'
 									onClick={() => {
-										setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
+										window.scrollTo(0, 0);
 									}}>
-									<ActiveLink to='/services' className=' px-1'>
-										Services
-									</ActiveLink>
-								</li>
-								<li
-									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase`}
-									onClick={() => {
-										setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
-									}}>
-									<ActiveLink to='/contact' className=' px-1'>
-										Contact
-									</ActiveLink>
-								</li>
+									<li
+										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
+											active === "Contact"
+												? "text-white active-link px-1"
+												: "text-[#FFFFFF99] px-1 navmenu"
+										} hover:text-white font-medium cursor-pointer`}
+										onClick={() => {
+											setActive("Contact");
+											setToggle(!toggle);
+										}}>
+										<span>Contact</span>
+									</li>
+								</Link>
 							</ul>
 						</div>
 					</div>

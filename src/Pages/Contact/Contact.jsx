@@ -1,21 +1,9 @@
-import contactBg from "../../assets/contact/Contact-bg.jpg";
-import Banner from "../../Utilities/Banner/Banner";
-import Capcha from "./Capcha/Capcha";
 import "./Contact.css";
 import ContactForm from "./ContactForm/ContactForm";
 const Contact = () => {
 	return (
 		<div>
-			<Banner
-				bannerBg={contactBg}
-				heading={"Contact"}
-				breadcrumbs={[
-					{
-						title: "Home",
-						url: "/",
-					},
-				]}></Banner>
-
+			<div className='h-[100px] bg-neutral-800 '></div>
 			<ContactForm></ContactForm>
 		</div>
 	);
