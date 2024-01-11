@@ -13,17 +13,20 @@ import tough_times_details from "../assets/services/tough_times/tough_times_deta
 // import image for Teenage Mentoring
 import teenage_mentoring from "../assets/services/teenage_mentoring/teenage_mentoring.png";
 import teenage_mentoring_hover from "../assets/services/teenage_mentoring/teenage_mentoring_hover.png";
+import teenage_mentoring_banner from "../assets/services/teenage_mentoring/teenage_mentoring_banner.png";
+import teenage_mentoring_details from "../assets/services/teenage_mentoring/teenage_mentoring_details.png";
 
 // import image for Team Building Workshops
 import team_building_workshop from "../assets/services/team_building_workshop/team_building_workshop.png";
 import team_building_workshop_hover from "../assets/services/team_building_workshop/team_building_workshop_hover.png";
 import team_building_workshop_details from "../assets/services/team_building_workshop/team_building_workshop_details.png";
+// import team_building_workshop_banner from "../assets/services/team_building_workshop";
 
 // import image for relationship_coaching
 import relationship_coaching from "../assets/services/relationship_coaching/relationship_coaching.png";
 import relationship_coaching_hover from "../assets/services/relationship_coaching/relationship_coaching_hover.png";
 import relationship_coaching_banner from "../assets/services/relationship_coaching/relationship_coaching_banner.png";
-import relationship_coaching_details from "../assets/services/relationship_coaching/relationship_coaching_details.jpg";
+import relationship_coaching_details from "../assets/services/relationship_coaching/relationship_coaching_details.png";
 
 // import image for talks
 import talks from "../assets/services/talks/talk.png";
@@ -164,10 +167,11 @@ const services = [
 		title: "Teenage Mentoring",
 		img: teenage_mentoring,
 		hover_img: teenage_mentoring_hover,
-		banner_img: talks_banner,
-		details_img: talks_details,
+		banner_img: teenage_mentoring_banner,
+		details_img: teenage_mentoring_details,
 		color: "#7A92CC",
-		description: "",
+		description:
+			"Too much pressure and too little useful guidance? Not being heard? Being a teenager is tough! We can help you try to make sense out of the chaos that is growing up.",
 		priceList: {
 			packs: [
 				{
@@ -181,7 +185,8 @@ const services = [
 		},
 
 		heading: "",
-		para1: "",
+		para1:
+			"We offer sessions specially adapted for teenagers to help suit your world, your interests and your concerns. We love to really listen to your side and help you find a way forward which really speaks to you.",
 
 		para2: [""],
 	},
@@ -190,7 +195,7 @@ const services = [
 		title: "Team Building Workshops",
 		img: team_building_workshop,
 		hover_img: team_building_workshop_hover,
-		banner_img: talks_banner,
+		banner_img: teenage_mentoring_banner,
 		details_img: team_building_workshop_details,
 		color: "#E9CB81",
 		description:

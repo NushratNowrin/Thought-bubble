@@ -2,10 +2,10 @@ import Image from "../../../assets/about/Haran-Rasalingam-01.jpg";
 import "./About.css";
 const About = () => {
 	return (
-		<div className='overflow-hidden mb-10 ' id='about'>
-			<div className='section-bg px-32 py-20 '>
-				<div className='about-container flex justify-around items-center gap-20'>
-					<div>
+		<div className='overflow-hidden mb-5 ' id='about'>
+			<div className='section-bg px-32 pt-20 '>
+				<div className='about-container grid grid-cols-3 justify-between items-center gap-10'>
+					<div className="col-span-2">
 						<h3 className='about-heading text-[#52565e] text-4xl leading-[3rem] font-semibold  relative mb-8'>
 							Thought-Bubble offers coaching, counselling and psychotherapy for
 							individuals and couples to help you:

@@ -14,7 +14,7 @@ const Hero = () => {
 		return words.slice(0, limit).join(" ");
 	};
 	return (
-		<div id='hero' className=' relative h-[90vh]'>
+		<div id='hero' className=' relative'>
 			<AutoplaySlider
 				play={true}
 				cancelOnInteraction={false} // should stop playing on user interaction
