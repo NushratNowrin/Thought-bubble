@@ -4,13 +4,13 @@ import "./Footer.css";
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<div className='main-footer relative px-52 pt-16 pb-10'>
+			<div className='main-footer relative px-5 sm:px-10 md:px-28 lg:px-52 pt-16 pb-10'>
 				{/* background Overlay */}
 				<div className='absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-80 z-10'></div>
 
 				<div className='relative z-20 text-white'>
-					<div className='grid grid-cols-4 justify-around gap-40'>
-						<div>
+					<div className='flex flex-col text-center sm:grid grid-cols-4 sm:justify-around gap-10 sm:gap-20 lg:gap-40'>
+						<div className='mx-auto'>
 							<img src={logo} alt='' />
 						</div>
 						<div className='col-span-2'>
@@ -54,7 +54,7 @@ const Footer = () => {
 				</div>
 			</div>
 
-			<div className='copyright-footer relative px-52'>
+			<div className='copyright-footer relative text-center px-5 sm:px-28 lg:px-52'>
 				{/* background Overlay */}
 				<div className='absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-80 z-10'></div>
 				<div className='h-[1px] w-[100%] bg-white mx-auto'></div>

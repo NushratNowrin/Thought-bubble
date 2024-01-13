@@ -6,8 +6,8 @@ const Main = () => {
 	return (
 		<div>
 			<Navbar />
-			<Outlet />
-			<Footer />
+			<Outlet className='w-full' />
+			<Footer className='w-full' />
 		</div>
 	);
 };
