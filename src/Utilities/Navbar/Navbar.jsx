@@ -22,7 +22,7 @@ const Navbar = () => {
 
 	const viewportHeight =
 		window.innerHeight || document.documentElement.clientHeight;
-	const scrollPosition = (viewportHeight * 90) / 100;
+	const scrollPosition = (viewportHeight * 80) / 100;
 
 	window.addEventListener("scroll", changeBg);
 	return (

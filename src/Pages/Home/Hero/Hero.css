@@ -1,9 +1,5 @@
-.awssld__container figure,
-.awssld__box {
-	height: 100%;
-}
 .awssld {
-	--slider-height-percentage: 45%;
+	height: 90vh;
 }
 .awssld__controls button {
 	top: 30%;
