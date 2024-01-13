@@ -179,7 +179,7 @@ const services = [
 				},
 			],
 			chooseForm: [
-				"Choose Form",
+				"Choose From",
 				["Where are you at", "where do you want to go", "how to get there"],
 			],
 		},

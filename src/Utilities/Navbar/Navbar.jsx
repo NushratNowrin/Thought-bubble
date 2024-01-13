@@ -35,7 +35,7 @@ const Navbar = () => {
 						? "bg-black bg-opacity-70 transition-all duration-100 ease-linear"
 						: "bg-transparent py-[10px] px-4"
 				} w-full  fixed top-0 z-50`}>
-				<div className='flex justify-evenly items-center mx-16'>
+				<div className='flex justify-evenly items-center mx-5 xs:mx-16'>
 					<Link
 						to='/'
 						className='flex items-center mr-[6px]'

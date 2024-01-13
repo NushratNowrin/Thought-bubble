@@ -11,7 +11,7 @@ const Footer = () => {
 				<div className='relative z-20 text-white'>
 					<div className='flex flex-col text-center sm:grid grid-cols-4 sm:justify-around gap-10 sm:gap-20 lg:gap-40'>
 						<div className='mx-auto'>
-							<img src={logo} alt='' />
+							<img className='max-w-36' src={logo} alt='' />
 						</div>
 						<div className='col-span-2'>
 							<h2 className='footer-description text-[28px] font-[700] mb-5'>

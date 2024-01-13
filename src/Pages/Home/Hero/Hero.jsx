@@ -24,12 +24,12 @@ const Hero = () => {
 						{/* Background Overlay */}
 						<div className='absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-70 z-10'></div>
 
-						<div className='text-white z-50 relative flex flex-col items-center justify-center text-center'>
+						<div className='text-white z-50 relative flex flex-col items-center justify-center text-center mx-10 sm:mx-40'>
 							<h2 className='font-semibold text-3xl tracking-wide mb-5'>
 								{service.title}
 							</h2>
 							{/* Use limitWords to show only 20 words of service.description */}
-							<p className='mx-40'>{limitWords(service.description, 30)}...</p>
+							<p className=''>{limitWords(service.description, 30)}...</p>
 							<Link to={`/services/${service.id}`} className='cursor-pointer'>
 								<button
 									onClick={() => {
