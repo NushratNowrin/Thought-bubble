@@ -6,9 +6,11 @@ import "./Navbar.css";
 
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
+	const [submebuToggle, setSubmebuToggle] = useState(false);
 	const [active, setActive] = useState("Home");
 	const [navBg, setNavbg] = useState(false);
 
@@ -81,7 +83,7 @@ const Navbar = () => {
 						</Link>
 
 						<li
-							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
+							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu arrow ${
 								active === "Services"
 									? "text-white active-link px-1"
 									: "text-[#FFFFFF99] px-1 navmenu"
@@ -94,7 +96,13 @@ const Navbar = () => {
 								onClick={() => {
 									window.scrollTo(0, 0);
 								}}>
-								<span>Services</span>
+								<span>
+									Services{" "}
+									<span>
+										{" "}
+										<IoIosArrowDown className='inline' />
+									</span>
+								</span>
 							</Link>
 							<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
 								{services.map((service) => (
@@ -185,28 +193,35 @@ const Navbar = () => {
 										active === "Services"
 											? "text-white active-link px-1"
 											: "text-[#FFFFFF99] px-1 navmenu"
-									} hover:text-white font-medium cursor-pointer`}
-									onClick={() => {
-										setActive("Services");
-										setToggle(!toggle);
-									}}>
+									} hover:text-white font-medium cursor-pointer`}>
 									<Link
 										to='/services'
 										onClick={() => {
+											setActive("Services");
+											setToggle(!toggle);
+
 											window.scrollTo(0, 0);
 										}}>
 										<span>Services</span>
 									</Link>
-									<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
-										{services.map((service) => (
-											<Link
-												key={service.id}
-												to={`/services/${service.id}`}
-												className='cursor-pointer'>
-												<li>{service.title}</li>
-											</Link>
-										))}
-									</ul>
+									<div
+										className='arrow inline'
+										onClick={() => setSubmebuToggle(!submebuToggle)}>
+										<IoIosArrowDown className='inline ml-3 -translate-y-[10%]' />
+
+										<div className={`${!submebuToggle ? "hidden" : "flex"} `}>
+											<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
+												{services.map((service) => (
+													<Link
+														key={service.id}
+														to={`/services/${service.id}`}
+														className='cursor-pointer'>
+														<li>{service.title}</li>
+													</Link>
+												))}
+											</ul>
+										</div>
+									</div>
 								</li>
 								<Link
 									to='/contact'
