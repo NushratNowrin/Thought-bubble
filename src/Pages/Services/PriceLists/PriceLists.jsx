@@ -7,9 +7,9 @@ const PriceLists = () => {
 	return (
 		<div>
 			<Heading heading={"Price List"}></Heading>
-			<div className='mx-20 my-10'>
+			<div className='xs:mx-3 sm:mx-10 lg:mx-20 my-10'>
 				{/* getting started */}
-				<div className='bg-slate-600 my-10 p-5 rounded-lg text-center'>
+				{/* <div className='bg-slate-600 my-10 p-5 rounded-lg text-center'>
 					<h2 className='text-white font-semibold text-xl mb-2'>
 						Getting Started
 					</h2>
@@ -40,7 +40,7 @@ const PriceLists = () => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 				{services.map((service, index) => (
 					<PriceList
 						key={index}

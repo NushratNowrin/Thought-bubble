@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Service.css";
 import { Link } from "react-router-dom";
 
 const Service = (service) => {
 	const { id, title, img, hover_img, color, description } = service;
 	const [isHovered, setIsHovered] = useState(false);
+	const [toggle, setToggle] = useState(false);
 
 	const handleMouseEnter = () => {
 		setIsHovered(true);
@@ -13,6 +14,11 @@ const Service = (service) => {
 	const handleMouseLeave = () => {
 		setIsHovered(false);
 	};
+
+	const handleMobileClick = () => {
+		setToggle(!toggle);
+	};
+
 	const image_bg = {
 		backgroundColor: color,
 		border: ` ${isHovered ? "2px solid white" : `1px solid ${color}`}`,
@@ -28,6 +34,30 @@ const Service = (service) => {
 	const button_bg = {
 		backgroundColor: color,
 	};
+	useEffect(() => {
+		// Cleanup function to remove the event listener
+		const handleResize = () => {
+			if (window.innerWidth > 600) {
+				setToggle(false);
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		// Cleanup function
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []); // Empty dependency array to run the effect only once
+
+	// const contentStyle = {
+	// 	bottom: toggle ? "-188px" : "0",
+	// };
+	const handleClick = () => {
+		if (window.innerWidth <= 600) {
+			handleMobileClick();
+		}
+	};
 	// Function to limit the description to a certain number of words
 	const limitWords = (text, limit) => {
 		const words = text.split(" ");
@@ -42,11 +72,19 @@ const Service = (service) => {
 				style={image_bg}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
+				onClick={handleClick}
 				className='h-72 rounded-xl service-card'>
 				<h3 className='text-slate-700 tracking-wider font-bold text-lg'>
 					{title}
 				</h3>
-				<div className='content rounded-b-xl '>
+				<div
+					className={`content rounded-b-xl ${
+						window.innerWidth <= 600
+							? toggle
+								? "bottom-[-188px]"
+								: "bottom-0"
+							: ""
+					}`}>
 					<p className='text-center text-[15px]'>{slicedDescription}...</p>
 					<div className='flex justify-center'>
 						<Link to={`/services/${id}`} className='cursor-pointer'>
