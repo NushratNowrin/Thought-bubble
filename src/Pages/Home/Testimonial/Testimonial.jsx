@@ -34,12 +34,11 @@ const Testimonial = () => {
 						nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti'></Heading>
 
 			{/* Testimonial body */}
-			<div className='py-10 mx-10 relative'>
+			<div className='py-10 mx-5 sm:mx-0 lg:mx-10 relative'>
 				<Swiper
 					effect={"coverflow"}
 					grabCursor={true}
 					centeredSlides={true}
-					slidesPerView={"2"}
 					spaceBetween={"20"}
 					coverflowEffect={{
 						rotate: 0,
@@ -55,12 +54,22 @@ const Testimonial = () => {
 						disableOnInteraction: true,
 					}}
 					navigation={true}
-					modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}>
+					modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
+					breakpoints={{
+						// when window width is >= 640px
+						0: {
+							slidesPerView: 1,
+						},
+						// when window width is >= 1024px
+						640: {
+							slidesPerView: 2,
+						},
+					}}>
 					{testimonials.map((testimonial, index) => (
 						<SwiperSlide
 							key={index}
 							className='bg-white rounded-lg testimonial-card'>
-							<div className='p-10 pt-16 text-center mx-10'>
+							<div className='p-3 xs:px-12 sm:p-3 md:p-10 pt-16 text-center lg:mx-10'>
 								<div className='text-[18px] font-[700] mb-2 text-black testimonial-heading'>
 									{testimonial.nickname}
 								</div>

@@ -19,3 +19,27 @@
 .swiper-pagination-bullet-active {
 	background-color: #feb900;
 }
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	color: #ffd565;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	.swiper-button-next:after,
+	.swiper-button-prev:after {
+		content: "";
+	}
+	.testimonial-card {
+		height: 400px;
+	}
+}
+@media only screen and (max-width: 250px) {
+	.swiper-button-next:after,
+	.swiper-button-prev:after {
+		content: "";
+	}
+	.testimonial-card {
+		height: 600px;
+	}
+}
