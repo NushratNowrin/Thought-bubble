@@ -37,8 +37,8 @@ const ServiceDetails = () => {
 			</div>
 
 			{/* Service Details */}
-			<div className='p-20'>
-				<div className='grid grid-cols-2 gap-4 justify-center'>
+			<div className='p-2 xs:p-10 sm:p-20'>
+				<div className='lg:grid grid-cols-2 gap-4 justify-center'>
 					{/* side content */}
 					<div className=''>
 						<h4 className='text-[#252625] text-xl font-[700] service-details-title'>
@@ -48,9 +48,9 @@ const ServiceDetails = () => {
 							{description}
 						</p>
 						{/* Price list */}
-						<div className='text-center '>
+						<div className='text-center text-sm xxs:text-base'>
 							<div className='font-medium'>
-								<div className='grid grid-cols-3 justify-between items-center gap-1 bg-amber-300 text-white'>
+								<div className='xs:grid grid-cols-3 justify-between items-center gap-1 p-2 bg-amber-300 text-white'>
 									<div></div>
 									<div className='col-span-2 font-semibold'>
 										<div className='grid grid-cols-3 items-center'>
@@ -62,7 +62,7 @@ const ServiceDetails = () => {
 								</div>
 								{packs.map((singlePack, index) => (
 									<div key={index}>
-										<div className='grid grid-cols-3 justify-between items-center bg-amber-100 my-[1px]'>
+										<div className='xs:grid grid-cols-3 justify-between items-center bg-amber-100 my-[1px]'>
 											<div className=' text-black bg-amber-200'>
 												{singlePack.pack[0]}
 											</div>
@@ -78,7 +78,7 @@ const ServiceDetails = () => {
 										</div>
 									</div>
 								))}
-								<div className='grid grid-cols-3 justify-between items-center gap-1 my-2 bg-amber-200'>
+								<div className='xs:grid grid-cols-3 justify-between items-center gap-1 my-2 bg-amber-200'>
 									<div className=' text-black '>
 										<div className=' text-black'>{chooseForm[0]}</div>
 									</div>

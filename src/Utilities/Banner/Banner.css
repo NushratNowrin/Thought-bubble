@@ -9,3 +9,23 @@
 .breadcrumbs h3 {
 	font-family: "Work Sans", sans-serif;
 }
+
+@media only screen and (max-width: 1000px) {
+	.breadcrumbs {
+		top: 50%;
+		left: 0;
+		transform: translate(50%, 50%);
+	}
+}
+@media only screen and (max-width: 620px) {
+	.breadcrumbs {
+		top: 50%;
+		left: 0;
+		transform: translate(40%, 20%);
+	}
+}
+@media only screen and (max-width: 500px) {
+	.breadcrumbs {
+		display: none;
+	}
+}

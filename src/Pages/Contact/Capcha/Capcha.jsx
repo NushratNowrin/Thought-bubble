@@ -12,7 +12,7 @@ const Capcha = () => {
 	};
 
 	return (
-		<div>
+		<div className='w-full'>
 			{/* reCAPTCHA component */}
 			<ReCAPTCHA sitekey={recaptchaKey} onChange={handleVerification} />
 		</div>

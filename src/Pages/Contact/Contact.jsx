@@ -2,7 +2,7 @@ import "./Contact.css";
 import ContactForm from "./ContactForm/ContactForm";
 const Contact = () => {
 	return (
-		<div className=''>
+		<div className='w-full'>
 			<div className='h-[100px] bg-neutral-800 '></div>
 
 			<ContactForm></ContactForm>
