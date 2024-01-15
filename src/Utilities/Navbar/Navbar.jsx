@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/thought_bubble_logo.gif";
 import { Link } from "react-router-dom";
 import { services } from "../../Contents";
@@ -26,7 +26,14 @@ const Navbar = () => {
 		window.innerHeight || document.documentElement.clientHeight;
 	const scrollPosition = (viewportHeight * 80) / 100;
 
-	window.addEventListener("scroll", changeBg);
+	useEffect(() => {
+		window.addEventListener("scroll", changeBg);
+
+		// Clean up event listener on component unmount
+		return () => {
+			window.removeEventListener("scroll", changeBg);
+		};
+	}, []);
 	return (
 		<nav>
 			<div
