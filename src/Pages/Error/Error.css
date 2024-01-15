@@ -1,0 +1,5 @@
+.gradient-text {
+    background-clip: text;
+    color: transparent;
+    @apply bg-gradient-to-r from-amber-500 via-blue-500 to-amber-500;
+}

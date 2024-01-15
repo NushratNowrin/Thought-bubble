@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Services from "./Pages/Services/Services";
 import ServiceDetails from "./Pages/Services/ServiceDetails/ServiceDetails";
 import { services } from "./Contents";
+import Error from "./Pages/Error/Error";
 
 // Basic routing
 const router = createBrowserRouter([
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
 				element: <Contact></Contact>,
 			},
 		],
+		errorElement: <Error />,
 	},
 ]);
 

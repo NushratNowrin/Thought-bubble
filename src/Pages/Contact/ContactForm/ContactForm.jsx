@@ -36,30 +36,24 @@ const ContactForm = () => {
 
 		setSuccess("");
 		setShowError("");
+
 		if (isVerified) {
-			// Proceed with your form submission logic
-			// console.log("Form submitted!");
+			try {
+				const url = "/Server/contact.php";
+				const response = await axios.post(url, formData);
+
+				const successMessage =
+					response.data ||
+					"Thank you for your submission! We will be in touch shortly.";
+
+				setSubmitted(true);
+				setSuccess(successMessage);
+			} catch (error) {
+				const errorMessage = error.response?.data || error.message;
+				setShowError(errorMessage);
+			}
 		} else {
-			// console.log("Please complete the reCAPTCHA verification.");
-		}
-
-		try {
-			// Sending form data to the server
-			const url = "/Server/contact.php";
-			const response = await axios.post(url, formData);
-
-			const successMessage =
-				response.data ||
-				"Thank you for your submission! We will be in touch shortly.";
-			// Handle successful submission
-			setSubmitted(true);
-			setSuccess(successMessage);
-			setSubmitted(true);
-		} catch (error) {
-			// Handle submission error
-			const errorMessage = error.response?.data || error.message;
-			setShowError(errorMessage);
-			setShowError(errorMessage);
+			setShowError("Please complete the reCAPTCHA verification.");
 		}
 	};
 

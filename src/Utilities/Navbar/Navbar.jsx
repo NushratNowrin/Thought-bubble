@@ -210,7 +210,7 @@ const Navbar = () => {
 										<IoIosArrowDown className='inline ml-3 -translate-y-[10%]' />
 
 										<div className={`${!submebuToggle ? "hidden" : "flex"} `}>
-											<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm'>
+											<ul className='submenu bg-[#ffffff] text-[#4a4d4a] capitalize text-sm z-50'>
 												{services.map((service) => (
 													<Link
 														key={service.id}
