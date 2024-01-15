@@ -1,6 +1,6 @@
 import "./Heading.css";
 
-const Heading = ({heading, subHeading}) => {
+const Heading = ({ heading, subHeading }) => {
 	return (
 		<div className='flex flex-col justify-center items-center '>
 			<div className='relative'>
@@ -8,7 +8,7 @@ const Heading = ({heading, subHeading}) => {
 					{heading}
 				</h2>
 			</div>
-			<p className='mx-52 p-1 text-center text-[#4a4d4a]'>
+			<p className='mx-5 md:mx-28 lg:mx-52 p-1 text-center text-[#4a4d4a]'>
 				{subHeading}
 			</p>
 		</div>

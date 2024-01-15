@@ -70,7 +70,7 @@ const Testimonial = () => {
 							key={index}
 							className='bg-white rounded-lg testimonial-card'>
 							<div className='p-3 xs:px-12 sm:p-3 md:p-10 pt-16 text-center lg:mx-10'>
-								<div className='text-[18px] font-[700] mb-2 text-black testimonial-heading'>
+								<div className='text-[18px] font-[700] mt-5 sm:mt-12 md:mt-5 mb-2 text-black testimonial-heading'>
 									{testimonial.nickname}
 								</div>
 								<div className='text-[#999999] text-sm font-medium testimonial-designation'>

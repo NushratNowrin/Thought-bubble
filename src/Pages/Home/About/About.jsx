@@ -26,11 +26,11 @@ const About = () => {
 							a complex world.
 						</p>
 					</div>
-					<div>
+					<div className='mx-auto'>
 						<img
 							src={Image}
 							alt='Haran Rasalingam'
-							className='w-[1100px] rounded-lg image'
+							className='sm:w-[1100px] rounded-lg image'
 						/>
 					</div>
 				</div>
