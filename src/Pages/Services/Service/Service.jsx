@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import "./Service.css";
 import { Link } from "react-router-dom";
+import Loader from "../../../Utilities/Loader/Loader";
 
 const Service = (service) => {
 	const { id, title, img, hover_img, color, description } = service;
 	const [isHovered, setIsHovered] = useState(false);
 	const [toggle, setToggle] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const handleMouseEnter = () => {
 		setIsHovered(true);
@@ -43,7 +45,7 @@ const Service = (service) => {
 		};
 
 		window.addEventListener("resize", handleResize);
-
+		setLoading(false)
 		// Cleanup function
 		return () => {
 			window.removeEventListener("resize", handleResize);
@@ -68,38 +70,42 @@ const Service = (service) => {
 	const slicedDescription = limitWords(description, 20);
 	return (
 		<div className='hover:z-20'>
-			<div
-				style={image_bg}
-				onMouseEnter={handleMouseEnter}
-				onMouseLeave={handleMouseLeave}
-				onClick={handleClick}
-				className='h-72 rounded-xl service-card'>
-				<h3 className='text-slate-700 tracking-wider font-bold text-lg'>
-					{title}
-				</h3>
+			{loading ? (
+				<Loader />
+			) : (
 				<div
-					className={`content rounded-b-xl ${
-						window.innerWidth <= 600
-							? toggle
-								? "bottom-[-188px]"
-								: "bottom-0"
-							: ""
-					}`}>
-					<p className='text-center text-[15px]'>{slicedDescription}...</p>
-					<div className='flex justify-center'>
-						<Link to={`/services/${id}`} className='cursor-pointer'>
-							<button
-								style={button_bg}
-								onClick={() => {
-									window.scrollTo(0, 0);
-								}}
-								className='px-4 py-[4px] rounded-lg text-white text-[15px] font-medium my-2 details-btn'>
-								Details
-							</button>
-						</Link>
+					style={image_bg}
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}
+					onClick={handleClick}
+					className='h-72 rounded-xl service-card'>
+					<h3 className='text-slate-700 tracking-wider font-bold text-lg'>
+						{title}
+					</h3>
+					<div
+						className={`content rounded-b-xl ${
+							window.innerWidth <= 600
+								? toggle
+									? "bottom-[-188px]"
+									: "bottom-0"
+								: ""
+						}`}>
+						<p className='text-center text-[15px]'>{slicedDescription}...</p>
+						<div className='flex justify-center'>
+							<Link to={`/services/${id}`} className='cursor-pointer'>
+								<button
+									style={button_bg}
+									onClick={() => {
+										window.scrollTo(0, 0);
+									}}
+									className='px-4 py-[4px] rounded-lg text-white text-[15px] font-medium my-2 details-btn'>
+									Details
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };
