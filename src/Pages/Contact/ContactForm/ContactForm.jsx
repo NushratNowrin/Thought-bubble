@@ -10,6 +10,7 @@ const ContactForm = () => {
 		contactNumber: "",
 		message: "",
 	});
+	// console.log(formData);
 	const [submitted, setSubmitted] = useState(false);
 	const [showError, setShowError] = useState("");
 	const [success, setSuccess] = useState("");
@@ -23,8 +24,13 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		// Basic form validation
-		if (!formData.name || !formData.emailAddress || !formData.message) {
-			alert("Name, Email, and Message are required fields.");
+		if (
+			!formData.name ||
+			!formData.emailAddress ||
+			!formData.contactNumber ||
+			!formData.message
+		) {
+			alert("Name, Contact Number, Email, and Message are required fields.");
 			return;
 		}
 
@@ -32,17 +38,15 @@ const ContactForm = () => {
 		setShowError("");
 		if (isVerified) {
 			// Proceed with your form submission logic
-			console.log("Form submitted!");
+			// console.log("Form submitted!");
 		} else {
-			console.log("Please complete the reCAPTCHA verification.");
+			// console.log("Please complete the reCAPTCHA verification.");
 		}
 
 		try {
 			// Sending form data to the server
-			const response = await axios.post(
-				"/thought-bubble.co.uk/contact.php",
-				formData
-			);
+			const url = "/Server/contact.php";
+			const response = await axios.post(url, formData);
 
 			const successMessage =
 				response.data ||
@@ -50,7 +54,6 @@ const ContactForm = () => {
 			// Handle successful submission
 			setSubmitted(true);
 			setSuccess(successMessage);
-
 			setSubmitted(true);
 		} catch (error) {
 			// Handle submission error
@@ -68,7 +71,10 @@ const ContactForm = () => {
 					Thank you for your enquiry. We will be in touch shortly.
 				</p>
 			) : (
-				<form onSubmit={handleSubmit} className='sm:w-[50%] w-[100%] mt-5'>
+				<form
+					method='post'
+					onSubmit={handleSubmit}
+					className='sm:w-[50%] w-[100%] mt-5'>
 					<div className='mb-4'>
 						<label htmlFor='name' className='text-lg font-medium text-gray-700'>
 							Name:

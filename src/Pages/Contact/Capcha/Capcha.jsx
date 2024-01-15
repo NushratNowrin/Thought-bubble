@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import "./Capcha.css";
 
 const Capcha = () => {
 	const [, setVerified] = useState(false);
@@ -12,7 +13,7 @@ const Capcha = () => {
 	};
 
 	return (
-		<div className='w-full'>
+		<div className='overflow-hidden'>
 			{/* reCAPTCHA component */}
 			<ReCAPTCHA sitekey={recaptchaKey} onChange={handleVerification} />
 		</div>
