@@ -1,3 +1,6 @@
+// import About Page image
+import Haran_Rasalingam_Image from "../assets/about/Haran-Rasalingam-01.jpg";
+
 // import image for personal_and_professional_growth
 import personal_and_professional_growth from "../assets/services/personal_and_professional_growth/personal_and_professional_growth.png";
 import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_hover.png";
@@ -41,7 +44,81 @@ import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
 import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
 import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
 
+// About page content here
+const aboutContent = {
+	// About Page heading
+	aboutHeading:
+		"Thought-Bubble offers coaching, counselling and psychotherapy for individuals and couples to help you:",
+	// About Page details content which are displayed as list
+	aboutListingContent: [
+		"design your unique path which fits with your values",
+		"personally and professionally, socially and psychologically",
+		"get the best out of your life",
+		"grow in terms of your personal development",
+		"tackle obstacles along the way",
+	],
+	// About page paragraph content below the list
+	aboutPara:
+		"Life is always full of ups and downs. Thought-Bubble encourages a courageous but down-to-earth perspective to achieve fulfilment in a complex world.",
+	aboutImage: Haran_Rasalingam_Image,
+};
+
+// Testimonial content here
+const testimonials = [
+	// Saul Goodman details
+	{
+		name: "Saul Goodman",
+		nickname: "S G",
+		designation: "Ceo & Founder",
+		image: Testimonial1,
+		star: 5,
+		review:
+			"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
+	},
+	// Sara Wilsson details
+	{
+		name: "Sara Wilsson",
+		nickname: "S W",
+		designation: "Designer",
+		image: Testimonial2,
+		star: 5,
+		review:
+			"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+	},
+	// Jena Karlis details
+	{
+		name: "Jena Karlis",
+		nickname: "J K",
+		designation: "Store Owner",
+		image: Testimonial3,
+		star: 5,
+		review:
+			"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+	},
+	// Matt Brandon details
+	{
+		name: "Matt Brandon",
+		nickname: "M B",
+		designation: "Freelancer",
+		image: Testimonial4,
+		star: 5,
+		review:
+			"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+	},
+	// John Larson details
+	{
+		name: "John Larson",
+		nickname: "J L",
+		designation: "Entrepreneur",
+		image: Testimonial5,
+		star: 5,
+		review:
+			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+	},
+];
+
 const services = [
+	// content for Personal and Professional Growth
 	{
 		id: "personal_and_professional_growth",
 		title: "Personal and Professional Growth",
@@ -52,6 +129,7 @@ const services = [
 		color: "#75A257",
 		description:
 			"Need some help with finding your path? We can help you make a plan for personal and professional aspects of your life and equip you with the skills and techniques to get you there.",
+		// Pricelist for Personal and Professional Growth
 		priceList: {
 			packs: [
 				{
@@ -84,6 +162,7 @@ const services = [
 			"This ranges from learning more about yourself and your values to help you with making key decisions in your life, boosting your self-confidence, and becoming an excellent communicator able to get your ideas across in a compelling way. We can coach you in techniques to facilitate your learning and to enhance your creative process to help you generate exciting new ideas.",
 		],
 	},
+	// content for Tough Times
 	{
 		id: "tough_times",
 		title: "Tough Times",
@@ -94,6 +173,7 @@ const services = [
 		color: "#A1A1A1",
 		description:
 			"Your mental health is essential for wellbeing. And life can take its toll on it. Whether a longstanding issue or a sudden crisis, we can help. ",
+		// Pricelist for Tough Times
 		priceList: {
 			packs: [
 				{
@@ -132,6 +212,7 @@ const services = [
 			"At Thought-Bubble, we offer a range of psychological and therapeutic interventions to help you whatever the issue, drawing on a range of approaches including: Cognitive Behavioural Therapy (CBT), Existential Therapy, NLP, Psychodynamic Counselling, Gestalt Therapy and Hypnotherapy",
 		],
 	},
+	// Content for Relationship Coaching
 	{
 		id: "relationship_coaching",
 		title: "Relationship Coaching",
@@ -142,6 +223,7 @@ const services = [
 		color: "#FAA87A",
 		description:
 			"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network. Relationship coaching works best when both people can attend sessions together. At Thought-Bubble, whatever the problem might be, we will work with you in a non-judgemental way.",
+		// Pricelist for Relationship Coaching
 		priceList: {
 			packs: [
 				{
@@ -162,6 +244,7 @@ const services = [
 			"And we make no presumptions about couples staying together or separating, so whatever the future holds for the relationship, helping both parties to work through difficulties constructively is our goal.",
 		],
 	},
+	// Content for Teenage Mentoring
 	{
 		id: "teenage_mentoring",
 		title: "Teenage Mentoring",
@@ -172,6 +255,7 @@ const services = [
 		color: "#7A92CC",
 		description:
 			"Too much pressure and too little useful guidance? Not being heard? Being a teenager is tough! We can help you try to make sense out of the chaos that is growing up.",
+		// Pricelist for Teenage Mentoring
 		priceList: {
 			packs: [
 				{
@@ -190,6 +274,7 @@ const services = [
 
 		para2: [""],
 	},
+	// Content for Team Building Workshops
 	{
 		id: "team_building_workshops",
 		title: "Team Building Workshops",
@@ -200,6 +285,7 @@ const services = [
 		color: "#E9CB81",
 		description:
 			"Want to create a high-performing team? So often in professional life, groups of people are put together and called a “team”. But rarely is much effort put into actually making a team.",
+		// Pricelists for Team Building Workshops
 		priceList: {
 			packs: [
 				{
@@ -221,7 +307,7 @@ const services = [
 			"At Thought-Bubble, we run workshops for both new and established teams to improve the dynamics of the team, bringing out the very best of the range of talents in the group and learning to support and help each other to reach high-performance.",
 		para2: [""],
 	},
-
+	// Content for Talks
 	{
 		id: "talks",
 		title: "Talks",
@@ -232,6 +318,7 @@ const services = [
 		color: "#FF8A03",
 		description:
 			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger. At Thought-Bubble, we help people make sense of it all through workshops, discussions and talks on specific topics. We also run sessions for teams to help team members understand each other and work together better.",
+		// Pricelist for Talks
 		priceList: {
 			packs: [
 				{
@@ -259,53 +346,4 @@ const services = [
 	},
 ];
 
-const testimonials = [
-	{
-		name: "Saul Goodman",
-		nickname: "S G",
-		designation: "Ceo & Founder",
-		image: Testimonial1,
-		star: 5,
-		review:
-			"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-	},
-	{
-		name: "Sara Wilsson",
-		nickname: "S W",
-		designation: "Designer",
-		image: Testimonial2,
-		star: 5,
-		review:
-			"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
-	},
-	{
-		name: "Jena Karlis",
-		nickname: "J K",
-		designation: "Store Owner",
-		image: Testimonial3,
-		star: 5,
-		review:
-			"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
-	},
-	{
-		name: "Matt Brandon",
-		nickname: "M B",
-		designation: "Freelancer",
-		image: Testimonial4,
-		star: 5,
-		review:
-			"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
-	},
-
-	{
-		name: "John Larson",
-		nickname: "J L",
-		designation: "Entrepreneur",
-		image: Testimonial5,
-		star: 5,
-		review:
-			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
-	},
-];
-
-export { services, testimonials };
+export { aboutContent, services, testimonials };
