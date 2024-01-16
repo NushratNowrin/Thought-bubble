@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/thought_bubble_logo.gif";
 import "./Footer.css";
 const Footer = () => {
+	const viewportHeight =
+		window.innerHeight || document.documentElement.clientHeight;
+	const scrollPosition = (viewportHeight * 80) / 100;
 	return (
 		<footer className='footer'>
 			<div className='main-footer relative px-5 sm:px-10 md:px-28 lg:px-52 pt-16 pb-10'>
@@ -26,25 +29,41 @@ const Footer = () => {
 							<ul className=' list-none'>
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<Link to='/'>
+									<Link
+										to='/'
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}>
 										<span>Home</span>
 									</Link>
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a href='#about'>
+									<a
+										href='#about'
+										onClick={() => {
+											window.scrollTo(0, scrollPosition);
+										}}>
 										<span>About Us</span>
 									</a>
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<Link to='/services'>
+									<Link
+										to='/services'
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}>
 										<span>Services</span>
 									</Link>
 								</li>
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<Link to='/contact'>
+									<Link
+										to='/contact'
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}>
 										<span>Contact</span>
 									</Link>
 								</li>
