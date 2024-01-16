@@ -39,13 +39,13 @@ const Footer = () => {
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
-									<a
-										href='#about'
+									<Link
+										to='/'
 										onClick={() => {
 											window.scrollTo(0, scrollPosition);
 										}}>
 										<span>About Us</span>
-									</a>
+									</Link>
 								</li>
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
@@ -60,7 +60,7 @@ const Footer = () => {
 								<li
 									className={` text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
 									<Link
-										to='/contact'
+										to='/contacts'
 										onClick={() => {
 											window.scrollTo(0, 0);
 										}}>

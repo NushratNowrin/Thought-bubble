@@ -124,7 +124,7 @@ const Navbar = () => {
 						</li>
 
 						<Link
-							to='/contact'
+							to='/contacts'
 							onClick={() => {
 								window.scrollTo(0, 0);
 							}}>
@@ -231,7 +231,7 @@ const Navbar = () => {
 									</div>
 								</li>
 								<Link
-									to='/contact'
+									to='/contacts'
 									onClick={() => {
 										window.scrollTo(0, 0);
 									}}>

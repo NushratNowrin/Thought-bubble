@@ -335,14 +335,9 @@ const services = [
 				],
 			],
 		},
-		heading: "Life Coaching",
-		para1:
-			"We work one-to-one with individuals for life coaching work, as well as with couples for relationship coaching. Our aim is to help people make the most out of their lives.",
-		para2: [
-			"About Coaching: coaching is geared towards exploring all your possibilities, making the most out of them and maximising your potential. We encourage a fresh perspective on your life to break routines which are no longer helpful or necessary. The goals in life coaching work may be very focused or more exploratory depending on the needs of the client. Coaching is very flexible and we continuously review and re-evaluate in collaboration with you.",
-			"At Thought-Bubble we have a range of approaches to suit your needs, including: Cognitive Behavioural Coaching, Existential Coaching, NLP Coaching, Gestalt Coaching and Agile Coaching.",
-			"All Thought-Bubble clients have an initial consultation session during which we work with you to decide on the appropriate course of action.",
-		],
+		heading: "",
+		para1: "",
+		para2: ["", ""],
 	},
 ];
 
