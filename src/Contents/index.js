@@ -23,7 +23,7 @@ import teenage_mentoring_details from "../assets/services/teenage_mentoring/teen
 import team_building_workshop from "../assets/services/team_building_workshop/team_building_workshop.png";
 import team_building_workshop_hover from "../assets/services/team_building_workshop/team_building_workshop_hover.png";
 import team_building_workshop_details from "../assets/services/team_building_workshop/team_building_workshop_details.png";
-// import team_building_workshop_banner from "../assets/services/team_building_workshop";
+import team_building_workshop_banner from "../assets/services/team_building_workshop/team_building_workshop_banner.png";
 
 // import image for relationship_coaching
 import relationship_coaching from "../assets/services/relationship_coaching/relationship_coaching.png";
@@ -280,7 +280,7 @@ const services = [
 		title: "Team Building Workshops",
 		img: team_building_workshop,
 		hover_img: team_building_workshop_hover,
-		banner_img: teenage_mentoring_banner,
+		banner_img: team_building_workshop_banner,
 		details_img: team_building_workshop_details,
 		color: "#E9CB81",
 		description:
