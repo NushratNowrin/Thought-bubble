@@ -21,7 +21,10 @@ const Footer = () => {
 								THOUGHT BUBBLE
 							</h2>
 							<p className='footer-description text-sm'>
-								Woodside Park Underground Station (Northern Line) London N12 8SE
+								Available online, onsite and at my private practice: <br />
+								London N12 <br />
+								Tube: Woodside Park / West Finchley; Bus: 221, 326 routes; Car:
+								free parking
 							</p>
 						</div>
 						<div>

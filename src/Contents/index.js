@@ -1,3 +1,6 @@
+// import Hero Page Image
+import Haran from "../assets/home/Hero/haran-banner-image.jpg";
+
 // import About Page image
 import Haran_Rasalingam_Image from "../assets/about/Haran-Rasalingam-01.jpg";
 
@@ -43,6 +46,53 @@ import Testimonial2 from "../assets/home/Testimonials/testimonial_2.png";
 import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
 import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
 import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
+
+// Hero image:
+const heroContents = [
+	{
+		id: "haran",
+		img: Haran,
+		heading: "Thought Bubble",
+		content:
+			"Stand out the way you want, fit in the way you need. Coaching, mentoring, team building and therapy customised for you",
+	},
+	// {
+	// 	img: personal_and_professional_growth_details,
+	// 	heading: "Personal and Professional Growth",
+	// 	content:
+	// 		"Need some help with finding your path? We can help you make a plan for personal and professional aspects of your life and equip you with the skills and techniques to get you there.",
+	// },
+	// {
+	// 	img: tough_times_details,
+	// 	heading: "Tough Times",
+	// 	content:
+	// 		"Your mental health is essential for wellbeing. And life can take its toll on it. Whether a longstanding issue or a sudden crisis, we can help. ",
+	// },
+	// {
+	// 	img: relationship_coaching_details,
+	// 	heading: "Relationship Coaching",
+	// 	content:
+	// 		"Problems within a couple relationship can cause deep and profound damage to both parties, to children and to the wider family and social network. Relationship coaching works best when both people can attend sessions together. At Thought-Bubble, whatever the problem might be, we will work with you in a non-judgemental way.",
+	// },
+	// {
+	// 	img: teenage_mentoring_details,
+	// 	heading: "Teenage Mentoring",
+	// 	content:
+	// 		"Too much pressure and too little useful guidance? Not being heard? Being a teenager is tough! We can help you try to make sense out of the chaos that is growing up.",
+	// },
+	// {
+	// 	img: team_building_workshop_details,
+	// 	heading: "Team Building Workshops",
+	// 	content:
+	// 		"Want to create a high-performing team? So often in professional life, groups of people are put together and called a “team”. But rarely is much effort put into actually making a team.",
+	// },
+	// {
+	// 	img: talks_details,
+	// 	heading: "Talks",
+	// 	content:
+	// 		"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger. At Thought-Bubble, we help people make sense of it all through workshops, discussions and talks on specific topics. We also run sessions for teams to help team members understand each other and work together better.",
+	// },
+];
 
 // About page content here
 const aboutContent = {
@@ -341,4 +391,4 @@ const services = [
 	},
 ];
 
-export { aboutContent, services, testimonials };
+export { heroContents, aboutContent, services, testimonials };

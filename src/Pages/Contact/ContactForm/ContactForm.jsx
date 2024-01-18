@@ -5,10 +5,10 @@ import Capcha from "../Capcha/Capcha";
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState({
-		name: "",
-		emailAddress: "",
-		contactNumber: "",
-		message: "",
+		Name: "",
+		EmailAddress: "",
+		ContactNumber: "",
+		Message: "",
 	});
 	// console.log(formData);
 	const [submitted, setSubmitted] = useState(false);
@@ -25,10 +25,10 @@ const ContactForm = () => {
 
 		// Basic form validation
 		if (
-			!formData.name ||
-			!formData.emailAddress ||
-			!formData.contactNumber ||
-			!formData.message
+			!formData.Name ||
+			!formData.EmailAddress ||
+			!formData.ContactNumber ||
+			!formData.Message
 		) {
 			alert("Name, Contact Number, Email, and Message are required fields.");
 			return;
@@ -37,9 +37,9 @@ const ContactForm = () => {
 		setSuccess("");
 		setShowError("");
 
-		if (isVerified) {
+		if (!isVerified) {
 			try {
-				const url = "https://thought-bubble.co.uk/contact.php";
+				const url = "http://localhost/contact/contact.php";
 				const response = await axios.post(url, formData);
 
 				const successMessage =
@@ -76,7 +76,7 @@ const ContactForm = () => {
 						<input
 							type='text'
 							id='name'
-							name='name'
+							name='Name'
 							value={formData.name}
 							onChange={handleChange}
 							className='form-input w-[100%] px-3 py-2 mt-2 rounded-lg'
@@ -92,7 +92,7 @@ const ContactForm = () => {
 						<input
 							type='email'
 							id='emailAddress'
-							name='emailAddress'
+							name='EmailAddress'
 							value={formData.emailAddress}
 							onChange={handleChange}
 							className='form-input w-[100%] px-3 py-2 mt-2 rounded-lg'
@@ -108,7 +108,7 @@ const ContactForm = () => {
 						<input
 							type='text'
 							id='contactNumber'
-							name='contactNumber'
+							name='ContactNumber'
 							value={formData.contactNumber}
 							onChange={handleChange}
 							className='form-input w-[100%] px-3 py-2 mt-2 rounded-lg'
@@ -123,7 +123,7 @@ const ContactForm = () => {
 						</label>
 						<textarea
 							id='message'
-							name='message'
+							name='Message'
 							value={formData.message}
 							onChange={handleChange}
 							className='form-input w-[100%] px-3 py-2 mt-2 rounded-lg'

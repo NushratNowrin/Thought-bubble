@@ -116,6 +116,9 @@ const Navbar = () => {
 									<Link
 										key={service.id}
 										to={`/services/${service.id}`}
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}
 										className='cursor-pointer'>
 										<li>{service.title}</li>
 									</Link>
@@ -222,6 +225,9 @@ const Navbar = () => {
 													<Link
 														key={service.id}
 														to={`/services/${service.id}`}
+														onClick={() => {
+															window.scrollTo(0, 0);
+														}}
 														className='cursor-pointer'>
 														<li>{service.title}</li>
 													</Link>
