@@ -12,13 +12,9 @@ const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [submebuToggle, setSubmebuToggle] = useState(false);
 	const location = useLocation();
-	const [active, setActive] = useState(() => {
-		const currentPathName = location.pathname;
+	const [, setActive] = useState();
 
-		if (currentPathName === "/") {
-			return "Home";
-		}
-	});
+	const currentPathName = location.pathname;
 
 	const [navBg, setNavbg] = useState(false);
 
@@ -44,7 +40,6 @@ const Navbar = () => {
 	}, []);
 
 	const currentPath = window.location.hash;
-	console.log(currentPath);
 	return (
 		<nav>
 			<div
@@ -71,14 +66,12 @@ const Navbar = () => {
 							}}>
 							<li
 								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase navlink ${
-									currentPath === "#/" || active === "Home"
+									currentPath === "#/" ||
+									(currentPathName === "/" && currentPath !== "#/#about")
 										? "text-white active-link px-1"
 										: "text-[#FFFFFF99] px-1 navmenu"
 								}
-								} `}
-								onClick={() => {
-									setActive("Home");
-								}}>
+								} `}>
 								<span>Home</span>
 							</li>
 						</Link>
@@ -180,7 +173,8 @@ const Navbar = () => {
 									}}>
 									<li
 										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-											currentPath === "#/" || active === "Home"
+											currentPath === "#/" ||
+											(currentPathName === "/" && currentPath !== "#/#about")
 												? "text-white active-link px-1"
 												: "text-[#FFFFFF99] px-1 navmenu"
 										}`}
