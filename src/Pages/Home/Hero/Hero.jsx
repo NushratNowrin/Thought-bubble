@@ -4,8 +4,8 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "./Hero.css";
-import { heroContents, services } from "../../../Contents";
 import { Link } from "react-router-dom";
+import { heroContents } from "../../../Contents";
 
 const Hero = () => {
 	// Function to limit the number of words in a string
@@ -19,20 +19,18 @@ const Hero = () => {
 				play={true}
 				cancelOnInteraction={false} // should stop playing on user interaction
 				interval={5000}>
-				{/* <div data-src={heroContents[0].img}></div> */}
-
-				{services.map((service) => (
-					<div key={service.id} data-src={service.details_img}>
+				{heroContents.map((heroContent) => (
+					<div key={heroContent.id} data-src={heroContent.heroImg}>
 						{/* Background Overlay */}
 						<div className='absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-70 z-10'></div>
 
 						<div className='text-white z-50 relative flex flex-col items-center justify-center text-center mx-0 sm:mx-40'>
 							<h2 className='font-semibold text-3xl tracking-wide mb-5'>
-								{service.title}
+								{heroContent.heading}
 							</h2>
 							{/* Use limitWords to show only 20 words of service.description */}
-							<p className=''>{limitWords(service.description, 30)}...</p>
-							<Link to={`/services/${service.id}`} className='cursor-pointer'>
+							<p className=''>{limitWords(heroContent.content, 30)}...</p>
+							<Link to={`${heroContent?.link}`} className='cursor-pointer'>
 								<button
 									onClick={() => {
 										window.scrollTo(0, 0);
