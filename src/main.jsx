@@ -43,7 +43,10 @@ const router = createHashRouter([
 				},
 			},
 		],
-		errorElement: <Error />,
+	},
+	{
+		path: "*",
+		element: <Error></Error>,
 	},
 ]);
 

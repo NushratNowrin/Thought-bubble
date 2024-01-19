@@ -38,7 +38,7 @@ import relationship_coaching_details from "../assets/services/relationship_coach
 import talks from "../assets/services/talks/talk.png";
 import talks_hover from "../assets/services/talks/talks_hover.png";
 import talks_banner from "../assets/services/talks/talks_banner.png";
-import talks_details from "../assets/services/talks/talks_details.jpeg";
+import talks_details from "../assets/services/talks/talks_details.png";
 
 // import images for testimonials
 import Testimonial1 from "../assets/home/Testimonials/testimonial_1.png";
@@ -104,7 +104,7 @@ const heroContents = [
 		heroImg: talks_details,
 		heading: "Talks",
 		content:
-			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger. At Thought-Bubble, we help people make sense of it all through workshops, discussions and talks on specific topics. We also run sessions for teams to help team members understand each other and work together better.",
+			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger.",
 		link: "/services/talks",
 	},
 ];
@@ -382,7 +382,7 @@ const services = [
 		details_img: talks_details,
 		color: "#FF8A03",
 		description:
-			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger. At Thought-Bubble, we help people make sense of it all through workshops, discussions and talks on specific topics. We also run sessions for teams to help team members understand each other and work together better.",
+			"Sometimes, the world seems to be a chaotic mess full of injustice, cruelty and absurdity. Society and politics can be bewildering and a cause of sadness, distress, frustration and anger.",
 		// Pricelist for Talks
 		priceList: {
 			packs: [
@@ -401,7 +401,8 @@ const services = [
 			],
 		},
 		heading: "",
-		para1: "",
+		para1:
+			"At Thought-Bubble, we help people make sense of it all delivering talks with Q&A on important social topics.",
 		para2: ["", ""],
 	},
 ];

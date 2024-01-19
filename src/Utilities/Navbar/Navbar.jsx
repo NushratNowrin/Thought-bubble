@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/thought_bubble_logo.gif";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { services } from "../../Contents";
 import "./Navbar.css";
 
@@ -11,7 +11,15 @@ import { IoIosArrowDown } from "react-icons/io";
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [submebuToggle, setSubmebuToggle] = useState(false);
-	const [active, setActive] = useState("Home");
+	const location = useLocation();
+	const [active, setActive] = useState(() => {
+		const currentPathName = location.pathname;
+
+		if (currentPathName === "/") {
+			return "Home";
+		}
+	});
+
 	const [navBg, setNavbg] = useState(false);
 
 	const changeBg = () => {
@@ -34,6 +42,9 @@ const Navbar = () => {
 			window.removeEventListener("scroll", changeBg);
 		};
 	}, []);
+
+	const currentPath = window.location.hash;
+	console.log(currentPath);
 	return (
 		<nav>
 			<div
@@ -59,11 +70,12 @@ const Navbar = () => {
 								window.scrollTo(0, 0);
 							}}>
 							<li
-								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-									active === "Home"
+								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase navlink ${
+									currentPath === "#/" || active === "Home"
 										? "text-white active-link px-1"
 										: "text-[#FFFFFF99] px-1 navmenu"
-								} hover:text-white font-medium cursor-pointer`}
+								}
+								} `}
 								onClick={() => {
 									setActive("Home");
 								}}>
@@ -78,10 +90,10 @@ const Navbar = () => {
 							}}>
 							<li
 								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-									active === "About"
+									currentPath === "#/#about"
 										? "text-white active-link px-1"
 										: "text-[#FFFFFF99] px-1 navmenu"
-								} hover:text-white font-medium cursor-pointer`}
+								} `}
 								onClick={() => {
 									setActive("About");
 								}}>
@@ -91,10 +103,10 @@ const Navbar = () => {
 
 						<li
 							className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu arrow ${
-								active === "Services"
+								currentPath === "#/services"
 									? "text-white active-link px-1"
 									: "text-[#FFFFFF99] px-1 navmenu"
-							} hover:text-white font-medium cursor-pointer`}
+							} `}
 							onClick={() => {
 								setActive("Services");
 							}}>
@@ -133,10 +145,10 @@ const Navbar = () => {
 							}}>
 							<li
 								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-									active === "Contact"
+									currentPath === "#/contacts"
 										? "text-white active-link px-1"
 										: "text-[#FFFFFF99] px-1 navmenu"
-								} hover:text-white font-medium cursor-pointer`}
+								} `}
 								onClick={() => {
 									setActive("Contact");
 								}}>
@@ -168,10 +180,10 @@ const Navbar = () => {
 									}}>
 									<li
 										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-											active === "Home"
+											currentPath === "#/" || active === "Home"
 												? "text-white active-link px-1"
 												: "text-[#FFFFFF99] px-1 navmenu"
-										} hover:text-white font-medium cursor-pointer`}
+										}`}
 										onClick={() => {
 											setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
 											setActive("Home");
@@ -186,11 +198,11 @@ const Navbar = () => {
 										window.scrollTo(0, scrollPosition);
 									}}>
 									<li
-										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-											active === "About"
+										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase  ${
+											currentPath === "#/#about"
 												? "text-white active-link px-1"
 												: "text-[#FFFFFF99] px-1 navmenu"
-										} hover:text-white font-medium cursor-pointer`}
+										}`}
 										onClick={() => {
 											setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
 											setActive("About");
@@ -200,10 +212,10 @@ const Navbar = () => {
 								</Link>
 								<li
 									className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase service-menu ${
-										active === "Services"
+										currentPath === "#/services"
 											? "text-white active-link px-1"
 											: "text-[#FFFFFF99] px-1 navmenu"
-									} hover:text-white font-medium cursor-pointer`}>
+									}`}>
 									<Link
 										to='/services'
 										onClick={() => {
@@ -243,10 +255,10 @@ const Navbar = () => {
 									}}>
 									<li
 										className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
-											active === "Contact"
+											currentPath === "#/contacts"
 												? "text-white active-link px-1"
 												: "text-[#FFFFFF99] px-1 navmenu"
-										} hover:text-white font-medium cursor-pointer`}
+										}`}
 										onClick={() => {
 											setActive("Contact");
 											setToggle(!toggle);

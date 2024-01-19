@@ -14,7 +14,6 @@ const ContactForm = () => {
 	const [submitted, setSubmitted] = useState(false);
 	const [showError, setShowError] = useState("");
 	const [success, setSuccess] = useState("");
-	const [isVerified] = useState(false);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,23 +36,19 @@ const ContactForm = () => {
 		setSuccess("");
 		setShowError("");
 
-		if (isVerified) {
-			try {
-				const url = "https://thought-bubble.co.uk/contact";
-				const response = await axios.post(url, formData);
+		try {
+			const url = "https://thought-bubble.co.uk/contact.php";
+			const response = await axios.post(url, formData);
 
-				const successMessage =
-					response.data ||
-					"Thank you for your submission! We will be in touch shortly.";
+			const successMessage =
+				response.data ||
+				"Thank you for your submission! We will be in touch shortly.";
 
-				setSubmitted(true);
-				setSuccess(successMessage);
-			} catch (error) {
-				const errorMessage = error.response?.data || error.message;
-				setShowError(errorMessage);
-			}
-		} else {
-			setShowError("Please complete the reCAPTCHA verification.");
+			setSubmitted(true);
+			setSuccess(successMessage);
+		} catch (error) {
+			const errorMessage = error.response?.data || error.message;
+			setShowError(errorMessage);
 		}
 	};
 

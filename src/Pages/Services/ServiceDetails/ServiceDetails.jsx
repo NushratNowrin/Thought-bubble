@@ -16,7 +16,6 @@ const ServiceDetails = () => {
 		para2,
 	} = serviceData;
 	const { packs, chooseForm } = priceList;
-	console.log(serviceData);
 	return (
 		<div>
 			{/* Services Banner */}

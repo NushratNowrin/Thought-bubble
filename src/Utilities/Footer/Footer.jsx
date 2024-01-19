@@ -43,7 +43,7 @@ const Footer = () => {
 								<li
 									className={`  text-[#ffffff99] hover:text-white cursor-pointer py-2 font-medium tracking-wide transition-all duration-300 ease-in-out`}>
 									<Link
-										to='/'
+										to='/#about'
 										onClick={() => {
 											window.scrollTo(0, scrollPosition);
 										}}>
