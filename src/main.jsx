@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // From React-router-dom
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 // import css file
 import "./index.css";
 import Main from "./Layout/Main";
@@ -13,7 +13,7 @@ import { services } from "./Contents";
 import Error from "./Pages/Error/Error";
 
 // Basic routing
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: "/",
 		element: <Main></Main>,
@@ -21,6 +21,14 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home></Home>,
+			},
+			{
+				path: "/services",
+				element: <Services></Services>,
+			},
+			{
+				path: "/contacts",
+				element: <Contact></Contact>,
 			},
 			{
 				path: "/services/:id",
@@ -34,14 +42,6 @@ const router = createBrowserRouter([
 					return selectedService;
 				},
 			},
-			{
-				path: "/services",
-				element: <Services></Services>,
-			},
-			{
-				path: "/contacts",
-				element: <Contact></Contact>,
-			},
 		],
 		errorElement: <Error />,
 	},
@@ -49,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<RouterProvider router={router}>
+			<Main />
+		</RouterProvider>
 	</React.StrictMode>
 );

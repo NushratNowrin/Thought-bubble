@@ -37,9 +37,9 @@ const ContactForm = () => {
 		setSuccess("");
 		setShowError("");
 
-		if (!isVerified) {
+		if (isVerified) {
 			try {
-				const url = "http://localhost/contact/contact.php";
+				const url = "https://thought-bubble.co.uk/contact";
 				const response = await axios.post(url, formData);
 
 				const successMessage =
