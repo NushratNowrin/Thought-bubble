@@ -1,13 +1,15 @@
 import About from "./About/About";
+import Clients from "./Clients/Clients";
 import Hero from "./Hero/Hero";
-import Testimonial from "./Testimonial/Testimonial";
+// import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
 	return (
 		<div>
 			<Hero></Hero>
 			<About></About>
-			<Testimonial></Testimonial>
+			{/* <Testimonial></Testimonial> */}
+			<Clients></Clients>
 		</div>
 	);
 };

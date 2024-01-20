@@ -47,6 +47,10 @@ import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
 import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
 import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
 
+// import images for footer
+import footer_bg from "../assets/footer_bg.jpg";
+// Clients
+
 // Hero image:
 const heroContents = [
 	{
@@ -407,4 +411,14 @@ const services = [
 	},
 ];
 
-export { heroContents, aboutContent, services, testimonials };
+const footerContents = {
+	footer_bg: footer_bg,
+	footer_heading: "THOUGHT BUBBLE",
+	footer_para: [
+		"Available online, onsite and at my private practice:",
+		"London N12",
+		"Tube: Woodside Park / West Finchley; Bus: 221, 326 routes; Car: free parking",
+	],
+};
+
+export { heroContents, aboutContent, services, testimonials, footerContents };
