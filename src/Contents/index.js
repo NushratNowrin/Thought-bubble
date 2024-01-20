@@ -55,7 +55,7 @@ const heroContents = [
 		heading: "Thought Bubble",
 		content:
 			"Stand out the way you want, fit in the way you need. Coaching, mentoring, team building and therapy customised for you",
-		link: "/",
+		link: "/#about",
 	},
 	{
 		id: "personal_and_professional_growth",

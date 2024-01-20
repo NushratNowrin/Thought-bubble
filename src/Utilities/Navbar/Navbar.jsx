@@ -76,11 +76,7 @@ const Navbar = () => {
 							</li>
 						</Link>
 
-						<Link
-							to='/#about'
-							onClick={() => {
-								window.scrollTo(0, scrollPosition);
-							}}>
+						<Link to='/#about' onClick={() => {}}>
 							<li
 								className={` hover:text-white cursor-pointer py-[10px] pr-0 pl-7 navlink text-[15px] font-medium uppercase ${
 									currentPath === "#/#about"
@@ -89,6 +85,7 @@ const Navbar = () => {
 								} `}
 								onClick={() => {
 									setActive("About");
+									window.scrollTo(0, scrollPosition);
 								}}>
 								<span>About</span>
 							</li>

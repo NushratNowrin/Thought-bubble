@@ -13,6 +13,9 @@ const Hero = () => {
 		const words = text.split(" ");
 		return words.slice(0, limit).join(" ");
 	};
+	const viewportHeight =
+		window.innerHeight || document.documentElement.clientHeight;
+	const scrollPosition = (viewportHeight * 80) / 100;
 	return (
 		<div id='hero' className=' relative '>
 			<AutoplaySlider
@@ -33,7 +36,11 @@ const Hero = () => {
 							<Link to={`${heroContent?.link}`} className='cursor-pointer'>
 								<button
 									onClick={() => {
-										window.scrollTo(0, 0);
+										if (heroContent?.link === "/#about") {
+											window.scrollTo(0, scrollPosition);
+										} else {
+											window.scrollTo(0, 0);
+										}
 									}}
 									className={`bg-gradient-to-b from-[#DDB602] to-[#F39807] px-6 py-2 rounded-3xl text-white font-medium my-2 details-btn mt-5`}>
 									Details
