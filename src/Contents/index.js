@@ -1,10 +1,20 @@
 // import Hero Page Image
 import Haran from "../assets/home/Hero/haran-banner-image.jpg";
 
-// import About Page image
+// import About Page images
 import Haran_Rasalingam_Image from "../assets/about/Haran-Rasalingam-01.jpg";
 
-// import image for personal_and_professional_growth
+// import Clients section images
+import mind from "../assets/home/Clients/mind.png";
+import knowledge_hut from "../assets/home/Clients/knowledge_hut.png";
+import guardian from "../assets/home/Clients/the_guardian.jpg";
+import deutsche from "../assets/home/Clients/Deutsche.png";
+import efinancialcareers from "../assets/home/Clients/efinancialcareers.png";
+import bbc from "../assets/home/Clients/BBC.png";
+import morgan from "../assets/home/Clients/morgan_stanley.png";
+import trainline from "../assets/home/Clients/trainline.png";
+
+// import images for personal_and_professional_growth
 import personal_and_professional_growth from "../assets/services/personal_and_professional_growth/personal_and_professional_growth.png";
 import personal_and_professional_growth_hover from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_hover.png";
 import personal_and_professional_growth_banner from "../assets/services/personal_and_professional_growth/personal_and_professional_growth_banner.png";
@@ -185,6 +195,19 @@ const testimonials = [
 			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
 	},
 ];
+
+// Clients content here
+const clients = {
+	para: "I work with both individual clients and corporate entities, offering a comprehensive range of services that encompass coaching, counselling, team-building, diversity and inclusion training, as well as the development of essential soft skills.",
+	mind_img: mind,
+	knowledge_hut_img: knowledge_hut,
+	guardian_img: guardian,
+	deutsche_img: deutsche,
+	efinancialcareers_img: efinancialcareers,
+	bbc_img: bbc,
+	morgan_img: morgan,
+	trainline_img: trainline,
+};
 
 const services = [
 	// content for Personal and Professional Growth
@@ -421,4 +444,11 @@ const footerContents = {
 	],
 };
 
-export { heroContents, aboutContent, services, testimonials, footerContents };
+export {
+	heroContents,
+	aboutContent,
+	clients,
+	services,
+	testimonials,
+	footerContents,
+};
