@@ -61,6 +61,13 @@ const Service = (service) => {
 	const handleClick = () => {
 		if (window.innerWidth <= 600) {
 			handleMobileClick();
+			// Find the DOM element for the clicked service panel
+			const servicePanel = document.getElementById(`service-${id}`);
+
+			// Check if the element exists before scrolling
+			if (servicePanel) {
+				servicePanel.scrollIntoView({ behavior: "smooth" });
+			}
 		}
 	};
 	// Function to limit the description to a certain number of words
@@ -77,6 +84,7 @@ const Service = (service) => {
 				<Loader />
 			) : (
 				<div
+					id={`service-${id}`}
 					style={image_bg}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
