@@ -229,6 +229,7 @@ const Navbar = () => {
 														key={service.id}
 														to={`/services/${service.id}`}
 														onClick={() => {
+															setToggle(!toggle); // By clicking on the mobile menu, it automatically close the toggle
 															window.scrollTo(0, 0);
 														}}
 														className='cursor-pointer'>

@@ -96,7 +96,7 @@ const Service = (service) => {
 						onClick={() => {
 							setToggle(!toggle);
 						}}></div>
-					<h3 className='text-slate-700 tracking-wider font-bold text-lg'>
+					<h3 className='text-white tracking-wider font-bold absolute text-lg bottom-5 left-5'>
 						{title}
 					</h3>
 					<div
