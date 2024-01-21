@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Banner from "../../../Utilities/Banner/Banner";
 import { GoCheckCircle } from "react-icons/go";
 import "./ServiceDetails.css";
@@ -7,12 +7,18 @@ import { useEffect, useState } from "react";
 
 const ServiceDetails = () => {
 	const [loading, setLoading] = useState(true);
+	const { id } = useParams();
+	// const navigate = useNavigate();
+
 	useEffect(() => {
-		setLoading(true);
-		setTimeout(() => {
+		// Simulating content loading delay
+		const timeoutId = setTimeout(() => {
 			setLoading(false);
 		}, 500);
-	}, []);
+
+		// Cleanup function
+		return () => clearTimeout(timeoutId);
+	}, [id]);
 	const serviceData = useLoaderData();
 	const {
 		title,
@@ -25,6 +31,10 @@ const ServiceDetails = () => {
 		para2,
 	} = serviceData;
 	const { packs, chooseForm } = priceList;
+	useEffect(() => {
+		// Reset loading state when navigating to a new route
+		setLoading(true);
+	}, [id]);
 	return (
 		<>
 			{loading ? (
