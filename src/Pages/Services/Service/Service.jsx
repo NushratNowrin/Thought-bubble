@@ -58,9 +58,6 @@ const Service = (service) => {
 		};
 	}, []); // Empty dependency array to run the effect only once
 
-	// const contentStyle = {
-	// 	bottom: toggle ? "-188px" : "0",
-	// };
 	const handleClick = () => {
 		if (window.innerWidth <= 600) {
 			handleMobileClick();
@@ -71,7 +68,7 @@ const Service = (service) => {
 		const words = text.split(" ");
 		return words.slice(0, limit).join(" ");
 	};
-
+	console.log(toggle);
 	// Slice the description to 20 words
 	const slicedDescription = limitWords(description, 20);
 	return (
@@ -87,18 +84,17 @@ const Service = (service) => {
 					className='h-72 rounded-xl service-card relative'>
 					<div
 						style={hover_bg}
-						className='hover-img rounded-xl absolute left-0 right-0 bottom-0 '></div>
+						className='hover-img rounded-xl absolute left-0 right-0 bottom-0 '
+						onClick={() => {
+							setToggle(!toggle);
+						}}></div>
 					<h3 className='text-slate-700 tracking-wider font-bold text-lg'>
 						{title}
 					</h3>
 					<div
-						className={`content rounded-b-xl ${
-							window.innerWidth <= 600
-								? toggle
-									? "bottom-[-188px]"
-									: "bottom-0"
-								: ""
-						}`}>
+						className={`content rounded-b-xl 
+						${window.innerWidth <= 600 ? (toggle ? "" : "hidden") : ""}
+						`}>
 						<p className='text-center text-[15px]'>{slicedDescription}...</p>
 						<div className='flex justify-center'>
 							<Link to={`/services/${id}`} className='cursor-pointer'>
