@@ -14,6 +14,7 @@ const ServiceDetails = () => {
 		// Simulating content loading delay
 		const timeoutId = setTimeout(() => {
 			setLoading(false);
+			window.scrollTo(0, 0);
 		}, 500);
 
 		// Cleanup function

@@ -106,7 +106,7 @@ const Service = (service) => {
 						onClick={() => {
 							setToggle(!toggle);
 						}}></div>
-					<h3 className='text-white tracking-wider font-bold absolute text-lg bottom-5 left-5'>
+					<h3 className='text-black tracking-wider font-bold absolute text-lg bottom-5 left-5 right-5 bg-white bg-opacity-50 p-3 rounded-lg'>
 						{title}
 					</h3>
 					<div
@@ -119,7 +119,11 @@ const Service = (service) => {
 								<button
 									style={button_bg}
 									onClick={() => {
-										window.scrollTo(0, 0);
+										setToggle(!toggle);
+										window.scrollTo({
+											top: 0,
+											behavior: "smooth",
+										});
 									}}
 									className='px-4 py-[4px] rounded-lg text-white text-[15px] font-medium my-2 details-btn'>
 									Details
