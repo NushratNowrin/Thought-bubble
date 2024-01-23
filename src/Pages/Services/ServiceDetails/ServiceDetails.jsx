@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Banner from "../../../Utilities/Banner/Banner";
 import { GoCheckCircle } from "react-icons/go";
 import "./ServiceDetails.css";

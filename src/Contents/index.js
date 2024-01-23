@@ -51,11 +51,11 @@ import talks_banner from "../assets/services/talks/talks_banner.png";
 import talks_details from "../assets/services/talks/talks_details.png";
 
 // import images for testimonials
-import Testimonial1 from "../assets/home/Testimonials/testimonial_1.png";
-import Testimonial2 from "../assets/home/Testimonials/testimonial_2.png";
-import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
-import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
-import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
+// import Testimonial1 from "../assets/home/Testimonials/testimonial_1.png";
+// import Testimonial2 from "../assets/home/Testimonials/testimonial_2.png";
+// import Testimonial3 from "../assets/home/Testimonials/testimonial_3.png";
+// import Testimonial4 from "../assets/home/Testimonials/testimonial_4.png";
+// import Testimonial5 from "../assets/home/Testimonials/testimonial_5.png";
 
 // import images for footer
 import footer_bg from "../assets/footer_bg.jpg";
@@ -71,6 +71,7 @@ const heroContents = [
 			"Stand out the way you want, fit in the way you need. Coaching, mentoring, team building and therapy customised for you",
 		link: "/#about",
 	},
+
 	{
 		id: "personal_and_professional_growth",
 		heroImg: personal_and_professional_growth_details,
@@ -143,61 +144,62 @@ const aboutContent = {
 };
 
 // Testimonial content here
-const testimonials = [
-	// Saul Goodman details
-	{
-		name: "Saul Goodman",
-		nickname: "S G",
-		designation: "Ceo & Founder",
-		image: Testimonial1,
-		star: 5,
-		review:
-			"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-	},
-	// Sara Wilsson details
-	{
-		name: "Sara Wilsson",
-		nickname: "S W",
-		designation: "Designer",
-		image: Testimonial2,
-		star: 5,
-		review:
-			"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
-	},
-	// Jena Karlis details
-	{
-		name: "Jena Karlis",
-		nickname: "J K",
-		designation: "Store Owner",
-		image: Testimonial3,
-		star: 5,
-		review:
-			"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
-	},
-	// Matt Brandon details
-	{
-		name: "Matt Brandon",
-		nickname: "M B",
-		designation: "Freelancer",
-		image: Testimonial4,
-		star: 5,
-		review:
-			"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
-	},
-	// John Larson details
-	{
-		name: "John Larson",
-		nickname: "J L",
-		designation: "Entrepreneur",
-		image: Testimonial5,
-		star: 5,
-		review:
-			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
-	},
-];
+// const testimonials = [
+// 	// Saul Goodman details
+// 	{
+// 		name: "Saul Goodman",
+// 		nickname: "S G",
+// 		designation: "Ceo & Founder",
+// 		image: Testimonial1,
+// 		star: 5,
+// 		review:
+// 			"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
+// 	},
+// 	// Sara Wilsson details
+// 	{
+// 		name: "Sara Wilsson",
+// 		nickname: "S W",
+// 		designation: "Designer",
+// 		image: Testimonial2,
+// 		star: 5,
+// 		review:
+// 			"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+// 	},
+// 	// Jena Karlis details
+// 	{
+// 		name: "Jena Karlis",
+// 		nickname: "J K",
+// 		designation: "Store Owner",
+// 		image: Testimonial3,
+// 		star: 5,
+// 		review:
+// 			"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+// 	},
+// 	// Matt Brandon details
+// 	{
+// 		name: "Matt Brandon",
+// 		nickname: "M B",
+// 		designation: "Freelancer",
+// 		image: Testimonial4,
+// 		star: 5,
+// 		review:
+// 			"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+// 	},
+// 	// John Larson details
+// 	{
+// 		name: "John Larson",
+// 		nickname: "J L",
+// 		designation: "Entrepreneur",
+// 		image: Testimonial5,
+// 		star: 5,
+// 		review:
+// 			"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+// 	},
+// ];
 
 // Clients content here
 const clients = {
+	heading: "Clients",
 	para: "I work with both individual clients and corporate entities, offering a comprehensive range of services that encompass coaching, counselling, team-building, diversity and inclusion training, as well as the development of essential soft skills.",
 	mind_img: mind,
 	knowledge_hut_img: knowledge_hut,
@@ -449,6 +451,6 @@ export {
 	aboutContent,
 	clients,
 	services,
-	testimonials,
+	// testimonials,
 	footerContents,
 };

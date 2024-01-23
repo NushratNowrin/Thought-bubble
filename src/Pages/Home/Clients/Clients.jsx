@@ -5,7 +5,7 @@ import "./Clients.css";
 const Clients = () => {
 	return (
 		<div className='bg-white py-20 text-center'>
-			<Heading heading={"Clients"} subHeading={clients.para}></Heading>
+			<Heading heading={clients.heading} subHeading={clients.para}></Heading>
 			<div className='flex flex-col item-center gap-10 sm:gap-0 my-10 px-5 xs:px-10 md:px-20 lg:px-32 xl:px-40 2xl:px-60'>
 				<div className='flex flex-col sm:flex-row justify-between gap-5 sm:gap-16 md:gap-20 lg:gap-32 md:h-32 xl:h-56 2xl:h-60 mx-auto xxs:mx-16 xs:mx-28 sm:mx-0 md:mx-20'>
 					<div>

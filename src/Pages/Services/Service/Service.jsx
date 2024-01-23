@@ -38,14 +38,16 @@ const Service = (service) => {
 		backgroundPosition: "center right",
 		transition: "top 0.5s ease-in-out,border 0.2s ease-in-out", // Smooth transition on hover
 	};
-
+	const empty_bg = {
+		backgroundColor: "rgba(255, 255, 255, 0)",
+	};
 	const button_bg = {
 		backgroundColor: color,
 	};
 	useEffect(() => {
 		// Cleanup function to remove the event listener
 		const handleResize = () => {
-			if (window.innerWidth > 600) {
+			if (window.innerWidth > 640) {
 				setToggle(false);
 			}
 		};
@@ -59,17 +61,22 @@ const Service = (service) => {
 	}, []); // Empty dependency array to run the effect only once
 
 	const handleClick = () => {
-		if (window.innerWidth <= 600) {
+		if (window.innerWidth <= 640) {
 			handleMobileClick();
 			// Find the DOM element for the clicked service panel
 			const servicePanel = document.getElementById(`service-${id}`);
 
 			// Check if the element exists before scrolling
 			if (servicePanel) {
-				servicePanel.scrollIntoView({ behavior: "smooth" });
+				servicePanel.scrollIntoView({
+					behavior: "smooth",
+					block: "center", // Scroll to the top of the element's layout box
+					inline: "center", // Scroll to the left of the element's layout box
+				});
 			}
 		}
 	};
+
 	// Function to limit the description to a certain number of words
 	const limitWords = (text, limit) => {
 		const words = text.split(" ");
@@ -92,7 +99,10 @@ const Service = (service) => {
 					className='h-72 rounded-xl service-card relative'>
 					<div
 						style={hover_bg}
-						className='hover-img rounded-xl absolute left-0 right-0 bottom-0 '
+						className='hover-img rounded-xl absolute left-0 right-0 bottom-0 hidden sm:block'></div>
+					<div
+						style={toggle ? hover_bg : empty_bg}
+						className='mobile-hover-img rounded-xl absolute left-0 right-0 bottom-0 top-0 block sm:hidden'
 						onClick={() => {
 							setToggle(!toggle);
 						}}></div>
@@ -101,7 +111,7 @@ const Service = (service) => {
 					</h3>
 					<div
 						className={`content rounded-b-xl 
-						${window.innerWidth <= 600 ? (toggle ? "" : "hidden") : ""}
+						${window.innerWidth <= 640 ? (toggle ? "" : "hidden") : ""}
 						`}>
 						<p className='text-center text-[15px]'>{slicedDescription}...</p>
 						<div className='flex justify-center'>
