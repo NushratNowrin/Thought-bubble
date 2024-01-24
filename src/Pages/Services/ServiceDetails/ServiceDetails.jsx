@@ -4,6 +4,7 @@ import { GoCheckCircle } from "react-icons/go";
 import "./ServiceDetails.css";
 import Loader from "../../../Utilities/Loader/Loader";
 import { useEffect, useState } from "react";
+import { MdArrowOutward } from "react-icons/md";
 
 const ServiceDetails = () => {
 	const [loading, setLoading] = useState(true);
@@ -122,6 +123,19 @@ const ServiceDetails = () => {
 										</div>
 									</div>
 								</div>
+								{title === "Talks" ? (
+									<div className='pt-5 flex items-center gap-1 text-blue-600 hover:text-purple-600 font-semibold text-sm'>
+										<a
+											target='_blank'
+											href='https://www.eventbrite.com/cc/thought-bubble-talks-2996269'
+											className=''>
+											Eventbrite upcoming talks
+										</a>{" "}
+										<MdArrowOutward />
+									</div>
+								) : (
+									""
+								)}
 							</div>
 							{/* img */}
 							<div>
